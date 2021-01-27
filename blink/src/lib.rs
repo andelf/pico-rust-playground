@@ -3,7 +3,7 @@
 use rpi_pico_sdk_sys::*;
 
 #[no_mangle]
-pub unsafe extern "C" fn rust_main() -> i32 {
+pub unsafe extern "C" fn main() -> i32 {
     const PIN_LED: u32 = 25;
 
     gpio_init(PIN_LED);

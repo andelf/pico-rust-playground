@@ -16,10 +16,10 @@ cmake ..
 make
 
 # Use BOOTSEL to boot your Pico into USB Drive Mode.
-cp main.uf2 /Volumes/RPI-RP2
+cp blink/blink.uf2 /Volumes/RPI-RP2
 
 # or any other mount point:
-#cp main.uf2 /mnt/MOUNT-POINT-OF-RPI-RP2
+#cp blink/blink.uf2 /mnt/MOUNT-POINT-OF-RPI-RP2
 ```
 
 ## Code inside
@@ -27,10 +27,9 @@ cp main.uf2 /Volumes/RPI-RP2
 ### CMakeLists.txt
 
 - Pull in PICO SDK
-- Define a `main` executable, the `main` function in `main.c`
-- Define a Rust dependency, exports `rust_main` entry point
+- Define subprojects
 
-### src/
+### blink
 
 A blink in unsafe Rust.
 
