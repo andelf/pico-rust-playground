@@ -1,6 +1,6 @@
 #![no_std]
 
-use rpi_pico_sdk::*;
+use rpi_pico_sdk_sys::*;
 
 #[no_mangle]
 pub unsafe extern "C" fn rust_main() -> i32 {

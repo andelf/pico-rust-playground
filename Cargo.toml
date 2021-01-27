@@ -10,4 +10,4 @@ crate-type = ["staticlib"]
 # path = "src/lib.rs"
 
 [dependencies]
-rpi-pico-sdk = { path = "./pico-sdk" }
+rpi-pico-sdk-sys = { path = "./pico-sdk-sys" }

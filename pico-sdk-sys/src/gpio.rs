@@ -1,44 +1,47 @@
-#![no_std]
-#![allow(
-    non_camel_case_types,
-    non_upper_case_globals,
-    non_snake_case,
-    dead_code
-)]
+use crate::*;
 
-pub mod ctypes;
-use ctypes::*;
-
-mod gen;
-pub use gen::*;
-
-// define macros
+// C macro definitions
 const sio_hw: *mut sio_hw_t = SIO_BASE as *mut sio_hw_t;
+// #define padsbank0_hw ((padsbank0_hw_t *)PADS_BANK0_BASE)
+const padsbank0_hw: *mut padsbank0_hw_t = PADS_BANK0_BASE as *mut padsbank0_hw_t;
 
-// NOTE: handle static inline functions
+// NOTE: bindgen cannot handle static inline functions
 #[inline]
 pub unsafe fn gpio_pull_up(gpio: uint) {
     gpio_set_pulls(gpio, true, false);
 }
 
-/*
-    #[inline]
-pub fn bool gpio_is_pulled_up(gpio: uint) {
-    #[inline]
+#[inline]
+pub unsafe fn gpio_is_pulled_up(gpio: uint) -> bool {
+    (*padsbank0_hw).io[gpio as usize] & PADS_BANK0_GPIO0_PUE_BITS != 0
+}
+#[inline]
 pub unsafe fn gpio_pull_down(gpio: uint) {
-    #[inline]
-pub fn bool gpio_is_pulled_down(gpio: uint) {
-    #[inline]
+    gpio_set_pulls(gpio, false, true);
+}
+#[inline]
+pub unsafe fn gpio_is_pulled_down(gpio: uint) -> bool {
+    (*padsbank0_hw).io[gpio as usize] & PADS_BANK0_GPIO0_PDE_BITS != 0
+}
+#[inline]
 pub unsafe fn gpio_disable_pulls(gpio: uint) {
-    #[inline]
-pub fn bool gpio_get(gpio: uint) {
-    #[inline]
-pub fn uint32_t gpio_get_all() {
-    */
+    gpio_set_pulls(gpio, false, false);
+}
+#[inline]
+pub unsafe fn gpio_get(gpio: uint) -> bool {
+    ((1 << gpio) & (*sio_hw).gpio_in) != 0
+}
+
+#[inline]
+pub unsafe fn gpio_get_all() -> uint32_t {
+    (*sio_hw).gpio_in
+}
+
 #[inline]
 pub unsafe fn gpio_set_mask(mask: uint32_t) {
     (*sio_hw).gpio_set = mask;
 }
+
 #[inline]
 pub unsafe fn gpio_clr_mask(mask: uint32_t) {
     (*sio_hw).gpio_clr = mask;
@@ -48,12 +51,16 @@ pub unsafe fn gpio_clr_mask(mask: uint32_t) {
 pub unsafe fn gpio_xor_mask(mask: uint32_t) {
     (*sio_hw).gpio_togl = mask;
 }
+
 /*
-    #[inline]
+#[inline]
 pub unsafe fn gpio_put_masked(mask: uint32_t, uint32_t value) {
-    #[inline]
-pub unsafe fn gpio_put_all(uint32_t value) {
-    */
+*/
+
+#[inline]
+pub unsafe fn gpio_put_all(value: uint32_t) {
+    (*sio_hw).gpio_out = value;
+}
 
 #[inline]
 pub unsafe fn gpio_put(gpio: uint, value: bool) {
@@ -68,15 +75,19 @@ pub unsafe fn gpio_put(gpio: uint, value: bool) {
 pub unsafe fn gpio_set_dir_out_masked(mask: uint32_t) {
     (*sio_hw).gpio_oe_set = mask;
 }
+
 #[inline]
 pub unsafe fn gpio_set_dir_in_masked(mask: uint32_t) {
     (*sio_hw).gpio_oe_clr = mask;
 }
+
 #[inline]
 pub unsafe fn gpio_set_dir_masked(mask: uint32_t, value: uint32_t) {
     (*sio_hw).gpio_oe_togl = ((*sio_hw).gpio_oe ^ value) & mask;
 }
-/*   #[inline]
+
+/*
+#[inline]
 pub unsafe fn gpio_set_dir_all_bits(uint32_t values) {
 */
 
@@ -91,9 +102,12 @@ pub unsafe fn gpio_set_dir(gpio: uint, out: u32) {
     }
 }
 
-/*
-    #[inline]
-pub fn bool gpio_is_dir_out(gpio: uint) {
-    #[inline]
-pub fn gpio: uint_get_dir(gpio: uint) {
-    */
+#[inline]
+pub unsafe fn gpio_is_dir_out(gpio: uint) -> bool {
+    (*sio_hw).gpio_oe & (1 << (gpio)) != 0
+}
+
+#[inline]
+pub unsafe fn gpio_get_dir(gpio: uint) -> uint {
+    gpio_is_dir_out(gpio) as uint
+}
