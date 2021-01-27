@@ -1,0 +1,13 @@
+[package]
+name = "rpi-pico-sdk"
+version = "0.0.1"
+authors = ["Andelf <andelf@gmail.com>"]
+edition = "2018"
+description = "The pico-sdk for Raspberry Pi Pico, via bindgen"
+homepage = "https://github.com/andelf/pico-rust-playground"
+documentation = "https://docs.rs/rpi-pico-sdk"
+license = "MIT"
+include = ["src/**/*", "Cargo.toml", "README.md", "LICENSE"]
+
+[badges]
+maintenance = { status = "experimental" }

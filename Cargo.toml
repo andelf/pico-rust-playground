@@ -1,0 +1,13 @@
+[package]
+name = "rust-wrapper"
+version = "0.1.0"
+authors = ["Andelf <andelf@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["staticlib"]
+# NOTE: Cargo use src/lib.rs for a lib target by default.
+# path = "src/lib.rs"
+
+[dependencies]
+rpi-pico-sdk = { path = "./pico-sdk" }
