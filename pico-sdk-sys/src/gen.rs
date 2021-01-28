@@ -4509,6 +4509,271 @@ pub const PWM_INTS_CH0_MSB: u32 = 0;
 pub const PWM_INTS_CH0_LSB: u32 = 0;
 pub const PWM_INTS_CH0_ACCESS: &'static [u8; 3usize] = b"RO\0";
 pub const PARAM_ASSERTIONS_ENABLED_PWM: u32 = 0;
+pub const SPI_SSPCR0_OFFSET: u32 = 0;
+pub const SPI_SSPCR0_BITS: u32 = 65535;
+pub const SPI_SSPCR0_RESET: u32 = 0;
+pub const SPI_SSPCR0_SCR_RESET: u32 = 0;
+pub const SPI_SSPCR0_SCR_BITS: u32 = 65280;
+pub const SPI_SSPCR0_SCR_MSB: u32 = 15;
+pub const SPI_SSPCR0_SCR_LSB: u32 = 8;
+pub const SPI_SSPCR0_SCR_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const SPI_SSPCR0_SPH_RESET: u32 = 0;
+pub const SPI_SSPCR0_SPH_BITS: u32 = 128;
+pub const SPI_SSPCR0_SPH_MSB: u32 = 7;
+pub const SPI_SSPCR0_SPH_LSB: u32 = 7;
+pub const SPI_SSPCR0_SPH_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const SPI_SSPCR0_SPO_RESET: u32 = 0;
+pub const SPI_SSPCR0_SPO_BITS: u32 = 64;
+pub const SPI_SSPCR0_SPO_MSB: u32 = 6;
+pub const SPI_SSPCR0_SPO_LSB: u32 = 6;
+pub const SPI_SSPCR0_SPO_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const SPI_SSPCR0_FRF_RESET: u32 = 0;
+pub const SPI_SSPCR0_FRF_BITS: u32 = 48;
+pub const SPI_SSPCR0_FRF_MSB: u32 = 5;
+pub const SPI_SSPCR0_FRF_LSB: u32 = 4;
+pub const SPI_SSPCR0_FRF_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const SPI_SSPCR0_DSS_RESET: u32 = 0;
+pub const SPI_SSPCR0_DSS_BITS: u32 = 15;
+pub const SPI_SSPCR0_DSS_MSB: u32 = 3;
+pub const SPI_SSPCR0_DSS_LSB: u32 = 0;
+pub const SPI_SSPCR0_DSS_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const SPI_SSPCR1_OFFSET: u32 = 4;
+pub const SPI_SSPCR1_BITS: u32 = 15;
+pub const SPI_SSPCR1_RESET: u32 = 0;
+pub const SPI_SSPCR1_SOD_RESET: u32 = 0;
+pub const SPI_SSPCR1_SOD_BITS: u32 = 8;
+pub const SPI_SSPCR1_SOD_MSB: u32 = 3;
+pub const SPI_SSPCR1_SOD_LSB: u32 = 3;
+pub const SPI_SSPCR1_SOD_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const SPI_SSPCR1_MS_RESET: u32 = 0;
+pub const SPI_SSPCR1_MS_BITS: u32 = 4;
+pub const SPI_SSPCR1_MS_MSB: u32 = 2;
+pub const SPI_SSPCR1_MS_LSB: u32 = 2;
+pub const SPI_SSPCR1_MS_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const SPI_SSPCR1_SSE_RESET: u32 = 0;
+pub const SPI_SSPCR1_SSE_BITS: u32 = 2;
+pub const SPI_SSPCR1_SSE_MSB: u32 = 1;
+pub const SPI_SSPCR1_SSE_LSB: u32 = 1;
+pub const SPI_SSPCR1_SSE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const SPI_SSPCR1_LBM_RESET: u32 = 0;
+pub const SPI_SSPCR1_LBM_BITS: u32 = 1;
+pub const SPI_SSPCR1_LBM_MSB: u32 = 0;
+pub const SPI_SSPCR1_LBM_LSB: u32 = 0;
+pub const SPI_SSPCR1_LBM_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const SPI_SSPDR_OFFSET: u32 = 8;
+pub const SPI_SSPDR_BITS: u32 = 65535;
+pub const SPI_SSPDR_RESET: &'static [u8; 2usize] = b"-\0";
+pub const SPI_SSPDR_DATA_RESET: &'static [u8; 2usize] = b"-\0";
+pub const SPI_SSPDR_DATA_BITS: u32 = 65535;
+pub const SPI_SSPDR_DATA_MSB: u32 = 15;
+pub const SPI_SSPDR_DATA_LSB: u32 = 0;
+pub const SPI_SSPDR_DATA_ACCESS: &'static [u8; 4usize] = b"RWF\0";
+pub const SPI_SSPSR_OFFSET: u32 = 12;
+pub const SPI_SSPSR_BITS: u32 = 31;
+pub const SPI_SSPSR_RESET: u32 = 3;
+pub const SPI_SSPSR_BSY_RESET: u32 = 0;
+pub const SPI_SSPSR_BSY_BITS: u32 = 16;
+pub const SPI_SSPSR_BSY_MSB: u32 = 4;
+pub const SPI_SSPSR_BSY_LSB: u32 = 4;
+pub const SPI_SSPSR_BSY_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPSR_RFF_RESET: u32 = 0;
+pub const SPI_SSPSR_RFF_BITS: u32 = 8;
+pub const SPI_SSPSR_RFF_MSB: u32 = 3;
+pub const SPI_SSPSR_RFF_LSB: u32 = 3;
+pub const SPI_SSPSR_RFF_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPSR_RNE_RESET: u32 = 0;
+pub const SPI_SSPSR_RNE_BITS: u32 = 4;
+pub const SPI_SSPSR_RNE_MSB: u32 = 2;
+pub const SPI_SSPSR_RNE_LSB: u32 = 2;
+pub const SPI_SSPSR_RNE_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPSR_TNF_RESET: u32 = 1;
+pub const SPI_SSPSR_TNF_BITS: u32 = 2;
+pub const SPI_SSPSR_TNF_MSB: u32 = 1;
+pub const SPI_SSPSR_TNF_LSB: u32 = 1;
+pub const SPI_SSPSR_TNF_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPSR_TFE_RESET: u32 = 1;
+pub const SPI_SSPSR_TFE_BITS: u32 = 1;
+pub const SPI_SSPSR_TFE_MSB: u32 = 0;
+pub const SPI_SSPSR_TFE_LSB: u32 = 0;
+pub const SPI_SSPSR_TFE_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPCPSR_OFFSET: u32 = 16;
+pub const SPI_SSPCPSR_BITS: u32 = 255;
+pub const SPI_SSPCPSR_RESET: u32 = 0;
+pub const SPI_SSPCPSR_CPSDVSR_RESET: u32 = 0;
+pub const SPI_SSPCPSR_CPSDVSR_BITS: u32 = 255;
+pub const SPI_SSPCPSR_CPSDVSR_MSB: u32 = 7;
+pub const SPI_SSPCPSR_CPSDVSR_LSB: u32 = 0;
+pub const SPI_SSPCPSR_CPSDVSR_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const SPI_SSPIMSC_OFFSET: u32 = 20;
+pub const SPI_SSPIMSC_BITS: u32 = 15;
+pub const SPI_SSPIMSC_RESET: u32 = 0;
+pub const SPI_SSPIMSC_TXIM_RESET: u32 = 0;
+pub const SPI_SSPIMSC_TXIM_BITS: u32 = 8;
+pub const SPI_SSPIMSC_TXIM_MSB: u32 = 3;
+pub const SPI_SSPIMSC_TXIM_LSB: u32 = 3;
+pub const SPI_SSPIMSC_TXIM_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const SPI_SSPIMSC_RXIM_RESET: u32 = 0;
+pub const SPI_SSPIMSC_RXIM_BITS: u32 = 4;
+pub const SPI_SSPIMSC_RXIM_MSB: u32 = 2;
+pub const SPI_SSPIMSC_RXIM_LSB: u32 = 2;
+pub const SPI_SSPIMSC_RXIM_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const SPI_SSPIMSC_RTIM_RESET: u32 = 0;
+pub const SPI_SSPIMSC_RTIM_BITS: u32 = 2;
+pub const SPI_SSPIMSC_RTIM_MSB: u32 = 1;
+pub const SPI_SSPIMSC_RTIM_LSB: u32 = 1;
+pub const SPI_SSPIMSC_RTIM_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const SPI_SSPIMSC_RORIM_RESET: u32 = 0;
+pub const SPI_SSPIMSC_RORIM_BITS: u32 = 1;
+pub const SPI_SSPIMSC_RORIM_MSB: u32 = 0;
+pub const SPI_SSPIMSC_RORIM_LSB: u32 = 0;
+pub const SPI_SSPIMSC_RORIM_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const SPI_SSPRIS_OFFSET: u32 = 24;
+pub const SPI_SSPRIS_BITS: u32 = 15;
+pub const SPI_SSPRIS_RESET: u32 = 8;
+pub const SPI_SSPRIS_TXRIS_RESET: u32 = 1;
+pub const SPI_SSPRIS_TXRIS_BITS: u32 = 8;
+pub const SPI_SSPRIS_TXRIS_MSB: u32 = 3;
+pub const SPI_SSPRIS_TXRIS_LSB: u32 = 3;
+pub const SPI_SSPRIS_TXRIS_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPRIS_RXRIS_RESET: u32 = 0;
+pub const SPI_SSPRIS_RXRIS_BITS: u32 = 4;
+pub const SPI_SSPRIS_RXRIS_MSB: u32 = 2;
+pub const SPI_SSPRIS_RXRIS_LSB: u32 = 2;
+pub const SPI_SSPRIS_RXRIS_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPRIS_RTRIS_RESET: u32 = 0;
+pub const SPI_SSPRIS_RTRIS_BITS: u32 = 2;
+pub const SPI_SSPRIS_RTRIS_MSB: u32 = 1;
+pub const SPI_SSPRIS_RTRIS_LSB: u32 = 1;
+pub const SPI_SSPRIS_RTRIS_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPRIS_RORRIS_RESET: u32 = 0;
+pub const SPI_SSPRIS_RORRIS_BITS: u32 = 1;
+pub const SPI_SSPRIS_RORRIS_MSB: u32 = 0;
+pub const SPI_SSPRIS_RORRIS_LSB: u32 = 0;
+pub const SPI_SSPRIS_RORRIS_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPMIS_OFFSET: u32 = 28;
+pub const SPI_SSPMIS_BITS: u32 = 15;
+pub const SPI_SSPMIS_RESET: u32 = 0;
+pub const SPI_SSPMIS_TXMIS_RESET: u32 = 0;
+pub const SPI_SSPMIS_TXMIS_BITS: u32 = 8;
+pub const SPI_SSPMIS_TXMIS_MSB: u32 = 3;
+pub const SPI_SSPMIS_TXMIS_LSB: u32 = 3;
+pub const SPI_SSPMIS_TXMIS_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPMIS_RXMIS_RESET: u32 = 0;
+pub const SPI_SSPMIS_RXMIS_BITS: u32 = 4;
+pub const SPI_SSPMIS_RXMIS_MSB: u32 = 2;
+pub const SPI_SSPMIS_RXMIS_LSB: u32 = 2;
+pub const SPI_SSPMIS_RXMIS_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPMIS_RTMIS_RESET: u32 = 0;
+pub const SPI_SSPMIS_RTMIS_BITS: u32 = 2;
+pub const SPI_SSPMIS_RTMIS_MSB: u32 = 1;
+pub const SPI_SSPMIS_RTMIS_LSB: u32 = 1;
+pub const SPI_SSPMIS_RTMIS_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPMIS_RORMIS_RESET: u32 = 0;
+pub const SPI_SSPMIS_RORMIS_BITS: u32 = 1;
+pub const SPI_SSPMIS_RORMIS_MSB: u32 = 0;
+pub const SPI_SSPMIS_RORMIS_LSB: u32 = 0;
+pub const SPI_SSPMIS_RORMIS_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPICR_OFFSET: u32 = 32;
+pub const SPI_SSPICR_BITS: u32 = 3;
+pub const SPI_SSPICR_RESET: u32 = 0;
+pub const SPI_SSPICR_RTIC_RESET: u32 = 0;
+pub const SPI_SSPICR_RTIC_BITS: u32 = 2;
+pub const SPI_SSPICR_RTIC_MSB: u32 = 1;
+pub const SPI_SSPICR_RTIC_LSB: u32 = 1;
+pub const SPI_SSPICR_RTIC_ACCESS: &'static [u8; 3usize] = b"WC\0";
+pub const SPI_SSPICR_RORIC_RESET: u32 = 0;
+pub const SPI_SSPICR_RORIC_BITS: u32 = 1;
+pub const SPI_SSPICR_RORIC_MSB: u32 = 0;
+pub const SPI_SSPICR_RORIC_LSB: u32 = 0;
+pub const SPI_SSPICR_RORIC_ACCESS: &'static [u8; 3usize] = b"WC\0";
+pub const SPI_SSPDMACR_OFFSET: u32 = 36;
+pub const SPI_SSPDMACR_BITS: u32 = 3;
+pub const SPI_SSPDMACR_RESET: u32 = 0;
+pub const SPI_SSPDMACR_TXDMAE_RESET: u32 = 0;
+pub const SPI_SSPDMACR_TXDMAE_BITS: u32 = 2;
+pub const SPI_SSPDMACR_TXDMAE_MSB: u32 = 1;
+pub const SPI_SSPDMACR_TXDMAE_LSB: u32 = 1;
+pub const SPI_SSPDMACR_TXDMAE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const SPI_SSPDMACR_RXDMAE_RESET: u32 = 0;
+pub const SPI_SSPDMACR_RXDMAE_BITS: u32 = 1;
+pub const SPI_SSPDMACR_RXDMAE_MSB: u32 = 0;
+pub const SPI_SSPDMACR_RXDMAE_LSB: u32 = 0;
+pub const SPI_SSPDMACR_RXDMAE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const SPI_SSPPERIPHID0_OFFSET: u32 = 4064;
+pub const SPI_SSPPERIPHID0_BITS: u32 = 255;
+pub const SPI_SSPPERIPHID0_RESET: u32 = 34;
+pub const SPI_SSPPERIPHID0_PARTNUMBER0_RESET: u32 = 34;
+pub const SPI_SSPPERIPHID0_PARTNUMBER0_BITS: u32 = 255;
+pub const SPI_SSPPERIPHID0_PARTNUMBER0_MSB: u32 = 7;
+pub const SPI_SSPPERIPHID0_PARTNUMBER0_LSB: u32 = 0;
+pub const SPI_SSPPERIPHID0_PARTNUMBER0_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPPERIPHID1_OFFSET: u32 = 4068;
+pub const SPI_SSPPERIPHID1_BITS: u32 = 255;
+pub const SPI_SSPPERIPHID1_RESET: u32 = 16;
+pub const SPI_SSPPERIPHID1_DESIGNER0_RESET: u32 = 1;
+pub const SPI_SSPPERIPHID1_DESIGNER0_BITS: u32 = 240;
+pub const SPI_SSPPERIPHID1_DESIGNER0_MSB: u32 = 7;
+pub const SPI_SSPPERIPHID1_DESIGNER0_LSB: u32 = 4;
+pub const SPI_SSPPERIPHID1_DESIGNER0_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPPERIPHID1_PARTNUMBER1_RESET: u32 = 0;
+pub const SPI_SSPPERIPHID1_PARTNUMBER1_BITS: u32 = 15;
+pub const SPI_SSPPERIPHID1_PARTNUMBER1_MSB: u32 = 3;
+pub const SPI_SSPPERIPHID1_PARTNUMBER1_LSB: u32 = 0;
+pub const SPI_SSPPERIPHID1_PARTNUMBER1_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPPERIPHID2_OFFSET: u32 = 4072;
+pub const SPI_SSPPERIPHID2_BITS: u32 = 255;
+pub const SPI_SSPPERIPHID2_RESET: u32 = 52;
+pub const SPI_SSPPERIPHID2_REVISION_RESET: u32 = 3;
+pub const SPI_SSPPERIPHID2_REVISION_BITS: u32 = 240;
+pub const SPI_SSPPERIPHID2_REVISION_MSB: u32 = 7;
+pub const SPI_SSPPERIPHID2_REVISION_LSB: u32 = 4;
+pub const SPI_SSPPERIPHID2_REVISION_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPPERIPHID2_DESIGNER1_RESET: u32 = 4;
+pub const SPI_SSPPERIPHID2_DESIGNER1_BITS: u32 = 15;
+pub const SPI_SSPPERIPHID2_DESIGNER1_MSB: u32 = 3;
+pub const SPI_SSPPERIPHID2_DESIGNER1_LSB: u32 = 0;
+pub const SPI_SSPPERIPHID2_DESIGNER1_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPPERIPHID3_OFFSET: u32 = 4076;
+pub const SPI_SSPPERIPHID3_BITS: u32 = 255;
+pub const SPI_SSPPERIPHID3_RESET: u32 = 0;
+pub const SPI_SSPPERIPHID3_CONFIGURATION_RESET: u32 = 0;
+pub const SPI_SSPPERIPHID3_CONFIGURATION_BITS: u32 = 255;
+pub const SPI_SSPPERIPHID3_CONFIGURATION_MSB: u32 = 7;
+pub const SPI_SSPPERIPHID3_CONFIGURATION_LSB: u32 = 0;
+pub const SPI_SSPPERIPHID3_CONFIGURATION_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPPCELLID0_OFFSET: u32 = 4080;
+pub const SPI_SSPPCELLID0_BITS: u32 = 255;
+pub const SPI_SSPPCELLID0_RESET: u32 = 13;
+pub const SPI_SSPPCELLID0_SSPPCELLID0_RESET: u32 = 13;
+pub const SPI_SSPPCELLID0_SSPPCELLID0_BITS: u32 = 255;
+pub const SPI_SSPPCELLID0_SSPPCELLID0_MSB: u32 = 7;
+pub const SPI_SSPPCELLID0_SSPPCELLID0_LSB: u32 = 0;
+pub const SPI_SSPPCELLID0_SSPPCELLID0_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPPCELLID1_OFFSET: u32 = 4084;
+pub const SPI_SSPPCELLID1_BITS: u32 = 255;
+pub const SPI_SSPPCELLID1_RESET: u32 = 240;
+pub const SPI_SSPPCELLID1_SSPPCELLID1_RESET: u32 = 240;
+pub const SPI_SSPPCELLID1_SSPPCELLID1_BITS: u32 = 255;
+pub const SPI_SSPPCELLID1_SSPPCELLID1_MSB: u32 = 7;
+pub const SPI_SSPPCELLID1_SSPPCELLID1_LSB: u32 = 0;
+pub const SPI_SSPPCELLID1_SSPPCELLID1_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPPCELLID2_OFFSET: u32 = 4088;
+pub const SPI_SSPPCELLID2_BITS: u32 = 255;
+pub const SPI_SSPPCELLID2_RESET: u32 = 5;
+pub const SPI_SSPPCELLID2_SSPPCELLID2_RESET: u32 = 5;
+pub const SPI_SSPPCELLID2_SSPPCELLID2_BITS: u32 = 255;
+pub const SPI_SSPPCELLID2_SSPPCELLID2_MSB: u32 = 7;
+pub const SPI_SSPPCELLID2_SSPPCELLID2_LSB: u32 = 0;
+pub const SPI_SSPPCELLID2_SSPPCELLID2_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const SPI_SSPPCELLID3_OFFSET: u32 = 4092;
+pub const SPI_SSPPCELLID3_BITS: u32 = 255;
+pub const SPI_SSPPCELLID3_RESET: u32 = 177;
+pub const SPI_SSPPCELLID3_SSPPCELLID3_RESET: u32 = 177;
+pub const SPI_SSPPCELLID3_SSPPCELLID3_BITS: u32 = 255;
+pub const SPI_SSPPCELLID3_SSPPCELLID3_MSB: u32 = 7;
+pub const SPI_SSPPCELLID3_SSPPCELLID3_LSB: u32 = 0;
+pub const SPI_SSPPCELLID3_SSPPCELLID3_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const PARAM_ASSERTIONS_ENABLED_SPI: u32 = 0;
 pub type int_least8_t = i8;
 pub type int_least16_t = i16;
 pub type int_least32_t = i32;
@@ -7275,6 +7540,300 @@ fn bindgen_test_layout_pwm_config() {
             stringify!(top)
         )
     );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct spi_hw_t {
+    pub cr0: io_rw_32,
+    pub cr1: io_rw_32,
+    pub dr: io_rw_32,
+    pub sr: io_rw_32,
+    pub cpsr: io_rw_32,
+    pub imsc: io_rw_32,
+    pub ris: io_rw_32,
+    pub mis: io_rw_32,
+    pub icr: io_rw_32,
+    pub dmacr: io_rw_32,
+}
+#[test]
+fn bindgen_test_layout_spi_hw_t() {
+    assert_eq!(
+        ::core::mem::size_of::<spi_hw_t>(),
+        40usize,
+        concat!("Size of: ", stringify!(spi_hw_t))
+    );
+    assert_eq!(
+        ::core::mem::align_of::<spi_hw_t>(),
+        4usize,
+        concat!("Alignment of ", stringify!(spi_hw_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<spi_hw_t>())).cr0 as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(spi_hw_t),
+            "::",
+            stringify!(cr0)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<spi_hw_t>())).cr1 as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(spi_hw_t),
+            "::",
+            stringify!(cr1)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<spi_hw_t>())).dr as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(spi_hw_t),
+            "::",
+            stringify!(dr)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<spi_hw_t>())).sr as *const _ as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(spi_hw_t),
+            "::",
+            stringify!(sr)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<spi_hw_t>())).cpsr as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(spi_hw_t),
+            "::",
+            stringify!(cpsr)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<spi_hw_t>())).imsc as *const _ as usize },
+        20usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(spi_hw_t),
+            "::",
+            stringify!(imsc)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<spi_hw_t>())).ris as *const _ as usize },
+        24usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(spi_hw_t),
+            "::",
+            stringify!(ris)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<spi_hw_t>())).mis as *const _ as usize },
+        28usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(spi_hw_t),
+            "::",
+            stringify!(mis)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<spi_hw_t>())).icr as *const _ as usize },
+        32usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(spi_hw_t),
+            "::",
+            stringify!(icr)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<spi_hw_t>())).dmacr as *const _ as usize },
+        36usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(spi_hw_t),
+            "::",
+            stringify!(dmacr)
+        )
+    );
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct spi_inst {
+    _unused: [u8; 0],
+}
+#[doc = " Opaque type representing an SPI instance."]
+pub type spi_inst_t = spi_inst;
+pub const SPI_CPHA_0: spi_cpha_t = 0;
+pub const SPI_CPHA_1: spi_cpha_t = 1;
+pub type spi_cpha_t = crate::ctypes::c_uint;
+pub const SPI_CPOL_0: spi_cpol_t = 0;
+pub const SPI_CPOL_1: spi_cpol_t = 1;
+pub type spi_cpol_t = crate::ctypes::c_uint;
+pub const SPI_LSB_FIRST: spi_order_t = 0;
+pub const SPI_MSB_FIRST: spi_order_t = 1;
+pub type spi_order_t = crate::ctypes::c_uint;
+extern "C" {
+    #[doc = " \\brief Initialise SPI instances"]
+    #[doc = "  \\ingroup hardware_spi"]
+    #[doc = " Puts the SPI into a known state, and enable it. Must be called before other"]
+    #[doc = " functions."]
+    #[doc = ""]
+    #[doc = " \\param spi SPI instance specifier, either \\ref spi0 or \\ref spi1"]
+    #[doc = " \\param baudrate Baudrate required in Hz"]
+    #[doc = ""]
+    #[doc = " \\note There is no guarantee that the baudrate requested will be possible, the nearest will be chosen,"]
+    #[doc = " and this function does not return any indication of this. You can use the \\ref spi_set_baudrate function"]
+    #[doc = " which will return the actual baudrate selected if this is important."]
+    pub fn spi_init(spi: *mut spi_inst_t, baudrate: uint);
+}
+extern "C" {
+    #[doc = " \\brief Deinitialise SPI instances"]
+    #[doc = "  \\ingroup hardware_spi"]
+    #[doc = " Puts the SPI into a disabled state. Init will need to be called to reenable the device"]
+    #[doc = " functions."]
+    #[doc = ""]
+    #[doc = " \\param spi SPI instance specifier, either \\ref spi0 or \\ref spi1"]
+    pub fn spi_deinit(spi: *mut spi_inst_t);
+}
+extern "C" {
+    #[doc = " \\brief Set SPI baudrate"]
+    #[doc = "  \\ingroup hardware_spi"]
+    #[doc = ""]
+    #[doc = " Set SPI frequency as close as possible to baudrate, and return the actual"]
+    #[doc = " achieved rate."]
+    #[doc = ""]
+    #[doc = " \\param spi SPI instance specifier, either \\ref spi0 or \\ref spi1"]
+    #[doc = " \\param baudrate Baudrate required in Hz, should be capable of a bitrate of at least 2Mbps, or higher, depending on system clock settings."]
+    #[doc = " \\return The actual baudrate set"]
+    pub fn spi_set_baudrate(spi: *mut spi_inst_t, baudrate: uint) -> uint;
+}
+extern "C" {
+    #[doc = " \\brief Write/Read to/from an SPI device"]
+    #[doc = "  \\ingroup hardware_spi"]
+    #[doc = ""]
+    #[doc = " Write \\p len bytes from \\p src to SPI. Simultaneously read \\p len bytes from SPI to \\p dst."]
+    #[doc = " Blocks until all data is transferred. No timeout, as SPI hardware always transfers at a known data rate."]
+    #[doc = ""]
+    #[doc = " \\param spi SPI instance specifier, either \\ref spi0 or \\ref spi1"]
+    #[doc = " \\param src Buffer of data to write"]
+    #[doc = " \\param dst Buffer for read data"]
+    #[doc = " \\param len Length of BOTH buffers"]
+    #[doc = " \\return Number of bytes written/read"]
+    pub fn spi_write_read_blocking(
+        spi: *mut spi_inst_t,
+        src: *const u8,
+        dst: *mut u8,
+        len: size_t,
+    ) -> crate::ctypes::c_int;
+}
+extern "C" {
+    #[doc = " \\brief Write to an SPI device, blocking"]
+    #[doc = "  \\ingroup hardware_spi"]
+    #[doc = ""]
+    #[doc = " Write \\p len bytes from \\p src to SPI, and discard any data received back"]
+    #[doc = " Blocks until all data is transferred. No timeout, as SPI hardware always transfers at a known data rate."]
+    #[doc = ""]
+    #[doc = " \\param spi SPI instance specifier, either \\ref spi0 or \\ref spi1"]
+    #[doc = " \\param src Buffer of data to write"]
+    #[doc = " \\param len Length of \\p src"]
+    #[doc = " \\return Number of bytes written/read"]
+    pub fn spi_write_blocking(
+        spi: *mut spi_inst_t,
+        src: *const u8,
+        len: size_t,
+    ) -> crate::ctypes::c_int;
+}
+extern "C" {
+    #[doc = " \\brief Read from an SPI device"]
+    #[doc = "  \\ingroup hardware_spi"]
+    #[doc = ""]
+    #[doc = " Read \\p len bytes from SPI to \\p dst."]
+    #[doc = " Blocks until all data is transferred. No timeout, as SPI hardware always transfers at a known data rate."]
+    #[doc = " \\p repeated_tx_data is output repeatedly on TX as data is read in from RX."]
+    #[doc = " Generally this can be 0, but some devices require a specific value here,"]
+    #[doc = " e.g. SD cards expect 0xff"]
+    #[doc = ""]
+    #[doc = " \\param spi SPI instance specifier, either \\ref spi0 or \\ref spi1"]
+    #[doc = " \\param repeated_tx_data Buffer of data to write"]
+    #[doc = " \\param dst Buffer for read data"]
+    #[doc = " \\param len Length of buffer \\p dst"]
+    #[doc = " \\return Number of bytes written/read"]
+    pub fn spi_read_blocking(
+        spi: *mut spi_inst_t,
+        repeated_tx_data: u8,
+        dst: *mut u8,
+        len: size_t,
+    ) -> crate::ctypes::c_int;
+}
+extern "C" {
+    #[doc = " \\brief Write/Read half words to/from an SPI device"]
+    #[doc = "  \\ingroup hardware_spi"]
+    #[doc = ""]
+    #[doc = " Write \\p len halfwords from \\p src to SPI. Simultaneously read \\p len halfwords from SPI to \\p dst."]
+    #[doc = " Blocks until all data is transferred. No timeout, as SPI hardware always transfers at a known data rate."]
+    #[doc = ""]
+    #[doc = " \\param spi SPI instance specifier, either \\ref spi0 or \\ref spi1"]
+    #[doc = " \\param src Buffer of data to write"]
+    #[doc = " \\param dst Buffer for read data"]
+    #[doc = " \\param len Length of BOTH buffers in halfwords"]
+    #[doc = " \\return Number of bytes written/read"]
+    pub fn spi_write16_read16_blocking(
+        spi: *mut spi_inst_t,
+        src: *const u16,
+        dst: *mut u16,
+        len: size_t,
+    ) -> crate::ctypes::c_int;
+}
+extern "C" {
+    #[doc = " \\brief Write to an SPI device"]
+    #[doc = "  \\ingroup hardware_spi"]
+    #[doc = ""]
+    #[doc = " Write \\p len halfwords from \\p src to SPI. Discard any data received back."]
+    #[doc = " Blocks until all data is transferred. No timeout, as SPI hardware always transfers at a known data rate."]
+    #[doc = ""]
+    #[doc = " \\param spi SPI instance specifier, either \\ref spi0 or \\ref spi1"]
+    #[doc = " \\param src Buffer of data to write"]
+    #[doc = " \\param len Length of buffers"]
+    #[doc = " \\return Number of bytes written/read"]
+    pub fn spi_write16_blocking(
+        spi: *mut spi_inst_t,
+        src: *const u16,
+        len: size_t,
+    ) -> crate::ctypes::c_int;
+}
+extern "C" {
+    #[doc = " \\brief Read from an SPI device"]
+    #[doc = "  \\ingroup hardware_spi"]
+    #[doc = ""]
+    #[doc = " Read \\p len halfwords from SPI to \\p dst."]
+    #[doc = " Blocks until all data is transferred. No timeout, as SPI hardware always transfers at a known data rate."]
+    #[doc = " \\p repeated_tx_data is output repeatedly on TX as data is read in from RX."]
+    #[doc = " Generally this can be 0, but some devices require a specific value here,"]
+    #[doc = " e.g. SD cards expect 0xff"]
+    #[doc = ""]
+    #[doc = " \\param spi SPI instance specifier, either \\ref spi0 or \\ref spi1"]
+    #[doc = " \\param repeated_tx_data Buffer of data to write"]
+    #[doc = " \\param dst Buffer for read data"]
+    #[doc = " \\param len Length of buffer \\p dst  in halfwords"]
+    #[doc = " \\return Number of bytes written/read"]
+    pub fn spi_read16_blocking(
+        spi: *mut spi_inst_t,
+        repeated_tx_data: u16,
+        dst: *mut u16,
+        len: size_t,
+    ) -> crate::ctypes::c_int;
 }
 pub type __builtin_va_list = [__va_list_tag; 1usize];
 #[repr(C)]
