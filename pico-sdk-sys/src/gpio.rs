@@ -174,6 +174,7 @@ pub unsafe fn gpio_get_dir(gpio: uint) -> uint {
 ///  \\ingroup hardware_gpio
 ///
 /// \\param gpio GPIO number
+#[inline]
 pub unsafe fn gpio_pull_up(gpio: uint) {
     gpio_set_pulls(gpio, true, false);
 }
@@ -182,6 +183,7 @@ pub unsafe fn gpio_pull_up(gpio: uint) {
 ///
 /// \\param gpio GPIO number
 /// \\return true if the GPIO is pulled up
+#[inline]
 pub unsafe fn gpio_is_pulled_up(gpio: uint) -> bool {
     (*padsbank0_hw).io[gpio as usize] & PADS_BANK0_GPIO0_PUE_BITS != 0
 }
@@ -189,6 +191,7 @@ pub unsafe fn gpio_is_pulled_up(gpio: uint) -> bool {
 ///  \\ingroup hardware_gpio
 ///
 /// \\param gpio GPIO number
+#[inline]
 pub unsafe fn gpio_pull_down(gpio: uint) {
     gpio_set_pulls(gpio, false, true);
 }
@@ -197,6 +200,7 @@ pub unsafe fn gpio_pull_down(gpio: uint) {
 ///
 /// \\param gpio GPIO number
 /// \\return true if the GPIO is pulled down
+#[inline]
 pub unsafe fn gpio_is_pulled_down(gpio: uint) -> bool {
     (*padsbank0_hw).io[gpio as usize] & PADS_BANK0_GPIO0_PDE_BITS != 0
 }
@@ -204,6 +208,7 @@ pub unsafe fn gpio_is_pulled_down(gpio: uint) -> bool {
 ///  \\ingroup hardware_gpio
 ///
 /// \\param gpio GPIO number
+#[inline]
 pub unsafe fn gpio_disable_pulls(gpio: uint) {
     gpio_set_pulls(gpio, false, false);
 }
