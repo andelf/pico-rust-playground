@@ -3095,6 +3095,1420 @@ pub const PARAM_ASSERTIONS_ENABLED_UART: u32 = 0;
 pub const PICO_UART_ENABLE_CRLF_SUPPORT: u32 = 1;
 pub const PICO_UART_DEFAULT_CRLF: u32 = 0;
 pub const PICO_DEFAULT_UART_BAUD_RATE: u32 = 115200;
+pub const PICO_MAX_SHARED_IRQ_HANDLERS: u32 = 4;
+pub const PICO_DISABLE_SHARED_IRQ_HANDLERS: u32 = 0;
+pub const TIMER_IRQ_0: u32 = 0;
+pub const TIMER_IRQ_1: u32 = 1;
+pub const TIMER_IRQ_2: u32 = 2;
+pub const TIMER_IRQ_3: u32 = 3;
+pub const PWM_IRQ_WRAP: u32 = 4;
+pub const USBCTRL_IRQ: u32 = 5;
+pub const XIP_IRQ: u32 = 6;
+pub const PIO0_IRQ_0: u32 = 7;
+pub const PIO0_IRQ_1: u32 = 8;
+pub const PIO1_IRQ_0: u32 = 9;
+pub const PIO1_IRQ_1: u32 = 10;
+pub const DMA_IRQ_0: u32 = 11;
+pub const DMA_IRQ_1: u32 = 12;
+pub const IO_IRQ_BANK0: u32 = 13;
+pub const IO_IRQ_QSPI: u32 = 14;
+pub const SIO_IRQ_PROC0: u32 = 15;
+pub const SIO_IRQ_PROC1: u32 = 16;
+pub const CLOCKS_IRQ: u32 = 17;
+pub const SPI0_IRQ: u32 = 18;
+pub const SPI1_IRQ: u32 = 19;
+pub const UART0_IRQ: u32 = 20;
+pub const UART1_IRQ: u32 = 21;
+pub const ADC_IRQ_FIFO: u32 = 22;
+pub const I2C0_IRQ: u32 = 23;
+pub const I2C1_IRQ: u32 = 24;
+pub const RTC_IRQ: u32 = 25;
+pub const M0PLUS_SYST_CSR_OFFSET: u32 = 57360;
+pub const M0PLUS_SYST_CSR_BITS: u32 = 65543;
+pub const M0PLUS_SYST_CSR_RESET: u32 = 0;
+pub const M0PLUS_SYST_CSR_COUNTFLAG_RESET: u32 = 0;
+pub const M0PLUS_SYST_CSR_COUNTFLAG_BITS: u32 = 65536;
+pub const M0PLUS_SYST_CSR_COUNTFLAG_MSB: u32 = 16;
+pub const M0PLUS_SYST_CSR_COUNTFLAG_LSB: u32 = 16;
+pub const M0PLUS_SYST_CSR_COUNTFLAG_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_SYST_CSR_CLKSOURCE_RESET: u32 = 0;
+pub const M0PLUS_SYST_CSR_CLKSOURCE_BITS: u32 = 4;
+pub const M0PLUS_SYST_CSR_CLKSOURCE_MSB: u32 = 2;
+pub const M0PLUS_SYST_CSR_CLKSOURCE_LSB: u32 = 2;
+pub const M0PLUS_SYST_CSR_CLKSOURCE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_SYST_CSR_TICKINT_RESET: u32 = 0;
+pub const M0PLUS_SYST_CSR_TICKINT_BITS: u32 = 2;
+pub const M0PLUS_SYST_CSR_TICKINT_MSB: u32 = 1;
+pub const M0PLUS_SYST_CSR_TICKINT_LSB: u32 = 1;
+pub const M0PLUS_SYST_CSR_TICKINT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_SYST_CSR_ENABLE_RESET: u32 = 0;
+pub const M0PLUS_SYST_CSR_ENABLE_BITS: u32 = 1;
+pub const M0PLUS_SYST_CSR_ENABLE_MSB: u32 = 0;
+pub const M0PLUS_SYST_CSR_ENABLE_LSB: u32 = 0;
+pub const M0PLUS_SYST_CSR_ENABLE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_SYST_RVR_OFFSET: u32 = 57364;
+pub const M0PLUS_SYST_RVR_BITS: u32 = 16777215;
+pub const M0PLUS_SYST_RVR_RESET: u32 = 0;
+pub const M0PLUS_SYST_RVR_RELOAD_RESET: u32 = 0;
+pub const M0PLUS_SYST_RVR_RELOAD_BITS: u32 = 16777215;
+pub const M0PLUS_SYST_RVR_RELOAD_MSB: u32 = 23;
+pub const M0PLUS_SYST_RVR_RELOAD_LSB: u32 = 0;
+pub const M0PLUS_SYST_RVR_RELOAD_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_SYST_CVR_OFFSET: u32 = 57368;
+pub const M0PLUS_SYST_CVR_BITS: u32 = 16777215;
+pub const M0PLUS_SYST_CVR_RESET: u32 = 0;
+pub const M0PLUS_SYST_CVR_CURRENT_RESET: u32 = 0;
+pub const M0PLUS_SYST_CVR_CURRENT_BITS: u32 = 16777215;
+pub const M0PLUS_SYST_CVR_CURRENT_MSB: u32 = 23;
+pub const M0PLUS_SYST_CVR_CURRENT_LSB: u32 = 0;
+pub const M0PLUS_SYST_CVR_CURRENT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_SYST_CALIB_OFFSET: u32 = 57372;
+pub const M0PLUS_SYST_CALIB_BITS: u32 = 3238002687;
+pub const M0PLUS_SYST_CALIB_RESET: u32 = 0;
+pub const M0PLUS_SYST_CALIB_NOREF_RESET: u32 = 0;
+pub const M0PLUS_SYST_CALIB_NOREF_BITS: u32 = 2147483648;
+pub const M0PLUS_SYST_CALIB_NOREF_MSB: u32 = 31;
+pub const M0PLUS_SYST_CALIB_NOREF_LSB: u32 = 31;
+pub const M0PLUS_SYST_CALIB_NOREF_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_SYST_CALIB_SKEW_RESET: u32 = 0;
+pub const M0PLUS_SYST_CALIB_SKEW_BITS: u32 = 1073741824;
+pub const M0PLUS_SYST_CALIB_SKEW_MSB: u32 = 30;
+pub const M0PLUS_SYST_CALIB_SKEW_LSB: u32 = 30;
+pub const M0PLUS_SYST_CALIB_SKEW_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_SYST_CALIB_TENMS_RESET: u32 = 0;
+pub const M0PLUS_SYST_CALIB_TENMS_BITS: u32 = 16777215;
+pub const M0PLUS_SYST_CALIB_TENMS_MSB: u32 = 23;
+pub const M0PLUS_SYST_CALIB_TENMS_LSB: u32 = 0;
+pub const M0PLUS_SYST_CALIB_TENMS_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_NVIC_ISER_OFFSET: u32 = 57600;
+pub const M0PLUS_NVIC_ISER_BITS: u32 = 4294967295;
+pub const M0PLUS_NVIC_ISER_RESET: u32 = 0;
+pub const M0PLUS_NVIC_ISER_SETENA_RESET: u32 = 0;
+pub const M0PLUS_NVIC_ISER_SETENA_BITS: u32 = 4294967295;
+pub const M0PLUS_NVIC_ISER_SETENA_MSB: u32 = 31;
+pub const M0PLUS_NVIC_ISER_SETENA_LSB: u32 = 0;
+pub const M0PLUS_NVIC_ISER_SETENA_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_ICER_OFFSET: u32 = 57728;
+pub const M0PLUS_NVIC_ICER_BITS: u32 = 4294967295;
+pub const M0PLUS_NVIC_ICER_RESET: u32 = 0;
+pub const M0PLUS_NVIC_ICER_CLRENA_RESET: u32 = 0;
+pub const M0PLUS_NVIC_ICER_CLRENA_BITS: u32 = 4294967295;
+pub const M0PLUS_NVIC_ICER_CLRENA_MSB: u32 = 31;
+pub const M0PLUS_NVIC_ICER_CLRENA_LSB: u32 = 0;
+pub const M0PLUS_NVIC_ICER_CLRENA_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_ISPR_OFFSET: u32 = 57856;
+pub const M0PLUS_NVIC_ISPR_BITS: u32 = 4294967295;
+pub const M0PLUS_NVIC_ISPR_RESET: u32 = 0;
+pub const M0PLUS_NVIC_ISPR_SETPEND_RESET: u32 = 0;
+pub const M0PLUS_NVIC_ISPR_SETPEND_BITS: u32 = 4294967295;
+pub const M0PLUS_NVIC_ISPR_SETPEND_MSB: u32 = 31;
+pub const M0PLUS_NVIC_ISPR_SETPEND_LSB: u32 = 0;
+pub const M0PLUS_NVIC_ISPR_SETPEND_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_ICPR_OFFSET: u32 = 57984;
+pub const M0PLUS_NVIC_ICPR_BITS: u32 = 4294967295;
+pub const M0PLUS_NVIC_ICPR_RESET: u32 = 0;
+pub const M0PLUS_NVIC_ICPR_CLRPEND_RESET: u32 = 0;
+pub const M0PLUS_NVIC_ICPR_CLRPEND_BITS: u32 = 4294967295;
+pub const M0PLUS_NVIC_ICPR_CLRPEND_MSB: u32 = 31;
+pub const M0PLUS_NVIC_ICPR_CLRPEND_LSB: u32 = 0;
+pub const M0PLUS_NVIC_ICPR_CLRPEND_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR0_OFFSET: u32 = 58368;
+pub const M0PLUS_NVIC_IPR0_BITS: u32 = 3233857728;
+pub const M0PLUS_NVIC_IPR0_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR0_IP_3_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR0_IP_3_BITS: u32 = 3221225472;
+pub const M0PLUS_NVIC_IPR0_IP_3_MSB: u32 = 31;
+pub const M0PLUS_NVIC_IPR0_IP_3_LSB: u32 = 30;
+pub const M0PLUS_NVIC_IPR0_IP_3_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR0_IP_2_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR0_IP_2_BITS: u32 = 12582912;
+pub const M0PLUS_NVIC_IPR0_IP_2_MSB: u32 = 23;
+pub const M0PLUS_NVIC_IPR0_IP_2_LSB: u32 = 22;
+pub const M0PLUS_NVIC_IPR0_IP_2_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR0_IP_1_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR0_IP_1_BITS: u32 = 49152;
+pub const M0PLUS_NVIC_IPR0_IP_1_MSB: u32 = 15;
+pub const M0PLUS_NVIC_IPR0_IP_1_LSB: u32 = 14;
+pub const M0PLUS_NVIC_IPR0_IP_1_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR0_IP_0_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR0_IP_0_BITS: u32 = 192;
+pub const M0PLUS_NVIC_IPR0_IP_0_MSB: u32 = 7;
+pub const M0PLUS_NVIC_IPR0_IP_0_LSB: u32 = 6;
+pub const M0PLUS_NVIC_IPR0_IP_0_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR1_OFFSET: u32 = 58372;
+pub const M0PLUS_NVIC_IPR1_BITS: u32 = 3233857728;
+pub const M0PLUS_NVIC_IPR1_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR1_IP_7_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR1_IP_7_BITS: u32 = 3221225472;
+pub const M0PLUS_NVIC_IPR1_IP_7_MSB: u32 = 31;
+pub const M0PLUS_NVIC_IPR1_IP_7_LSB: u32 = 30;
+pub const M0PLUS_NVIC_IPR1_IP_7_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR1_IP_6_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR1_IP_6_BITS: u32 = 12582912;
+pub const M0PLUS_NVIC_IPR1_IP_6_MSB: u32 = 23;
+pub const M0PLUS_NVIC_IPR1_IP_6_LSB: u32 = 22;
+pub const M0PLUS_NVIC_IPR1_IP_6_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR1_IP_5_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR1_IP_5_BITS: u32 = 49152;
+pub const M0PLUS_NVIC_IPR1_IP_5_MSB: u32 = 15;
+pub const M0PLUS_NVIC_IPR1_IP_5_LSB: u32 = 14;
+pub const M0PLUS_NVIC_IPR1_IP_5_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR1_IP_4_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR1_IP_4_BITS: u32 = 192;
+pub const M0PLUS_NVIC_IPR1_IP_4_MSB: u32 = 7;
+pub const M0PLUS_NVIC_IPR1_IP_4_LSB: u32 = 6;
+pub const M0PLUS_NVIC_IPR1_IP_4_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR2_OFFSET: u32 = 58376;
+pub const M0PLUS_NVIC_IPR2_BITS: u32 = 3233857728;
+pub const M0PLUS_NVIC_IPR2_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR2_IP_11_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR2_IP_11_BITS: u32 = 3221225472;
+pub const M0PLUS_NVIC_IPR2_IP_11_MSB: u32 = 31;
+pub const M0PLUS_NVIC_IPR2_IP_11_LSB: u32 = 30;
+pub const M0PLUS_NVIC_IPR2_IP_11_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR2_IP_10_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR2_IP_10_BITS: u32 = 12582912;
+pub const M0PLUS_NVIC_IPR2_IP_10_MSB: u32 = 23;
+pub const M0PLUS_NVIC_IPR2_IP_10_LSB: u32 = 22;
+pub const M0PLUS_NVIC_IPR2_IP_10_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR2_IP_9_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR2_IP_9_BITS: u32 = 49152;
+pub const M0PLUS_NVIC_IPR2_IP_9_MSB: u32 = 15;
+pub const M0PLUS_NVIC_IPR2_IP_9_LSB: u32 = 14;
+pub const M0PLUS_NVIC_IPR2_IP_9_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR2_IP_8_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR2_IP_8_BITS: u32 = 192;
+pub const M0PLUS_NVIC_IPR2_IP_8_MSB: u32 = 7;
+pub const M0PLUS_NVIC_IPR2_IP_8_LSB: u32 = 6;
+pub const M0PLUS_NVIC_IPR2_IP_8_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR3_OFFSET: u32 = 58380;
+pub const M0PLUS_NVIC_IPR3_BITS: u32 = 3233857728;
+pub const M0PLUS_NVIC_IPR3_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR3_IP_15_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR3_IP_15_BITS: u32 = 3221225472;
+pub const M0PLUS_NVIC_IPR3_IP_15_MSB: u32 = 31;
+pub const M0PLUS_NVIC_IPR3_IP_15_LSB: u32 = 30;
+pub const M0PLUS_NVIC_IPR3_IP_15_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR3_IP_14_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR3_IP_14_BITS: u32 = 12582912;
+pub const M0PLUS_NVIC_IPR3_IP_14_MSB: u32 = 23;
+pub const M0PLUS_NVIC_IPR3_IP_14_LSB: u32 = 22;
+pub const M0PLUS_NVIC_IPR3_IP_14_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR3_IP_13_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR3_IP_13_BITS: u32 = 49152;
+pub const M0PLUS_NVIC_IPR3_IP_13_MSB: u32 = 15;
+pub const M0PLUS_NVIC_IPR3_IP_13_LSB: u32 = 14;
+pub const M0PLUS_NVIC_IPR3_IP_13_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR3_IP_12_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR3_IP_12_BITS: u32 = 192;
+pub const M0PLUS_NVIC_IPR3_IP_12_MSB: u32 = 7;
+pub const M0PLUS_NVIC_IPR3_IP_12_LSB: u32 = 6;
+pub const M0PLUS_NVIC_IPR3_IP_12_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR4_OFFSET: u32 = 58384;
+pub const M0PLUS_NVIC_IPR4_BITS: u32 = 3233857728;
+pub const M0PLUS_NVIC_IPR4_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR4_IP_19_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR4_IP_19_BITS: u32 = 3221225472;
+pub const M0PLUS_NVIC_IPR4_IP_19_MSB: u32 = 31;
+pub const M0PLUS_NVIC_IPR4_IP_19_LSB: u32 = 30;
+pub const M0PLUS_NVIC_IPR4_IP_19_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR4_IP_18_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR4_IP_18_BITS: u32 = 12582912;
+pub const M0PLUS_NVIC_IPR4_IP_18_MSB: u32 = 23;
+pub const M0PLUS_NVIC_IPR4_IP_18_LSB: u32 = 22;
+pub const M0PLUS_NVIC_IPR4_IP_18_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR4_IP_17_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR4_IP_17_BITS: u32 = 49152;
+pub const M0PLUS_NVIC_IPR4_IP_17_MSB: u32 = 15;
+pub const M0PLUS_NVIC_IPR4_IP_17_LSB: u32 = 14;
+pub const M0PLUS_NVIC_IPR4_IP_17_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR4_IP_16_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR4_IP_16_BITS: u32 = 192;
+pub const M0PLUS_NVIC_IPR4_IP_16_MSB: u32 = 7;
+pub const M0PLUS_NVIC_IPR4_IP_16_LSB: u32 = 6;
+pub const M0PLUS_NVIC_IPR4_IP_16_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR5_OFFSET: u32 = 58388;
+pub const M0PLUS_NVIC_IPR5_BITS: u32 = 3233857728;
+pub const M0PLUS_NVIC_IPR5_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR5_IP_23_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR5_IP_23_BITS: u32 = 3221225472;
+pub const M0PLUS_NVIC_IPR5_IP_23_MSB: u32 = 31;
+pub const M0PLUS_NVIC_IPR5_IP_23_LSB: u32 = 30;
+pub const M0PLUS_NVIC_IPR5_IP_23_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR5_IP_22_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR5_IP_22_BITS: u32 = 12582912;
+pub const M0PLUS_NVIC_IPR5_IP_22_MSB: u32 = 23;
+pub const M0PLUS_NVIC_IPR5_IP_22_LSB: u32 = 22;
+pub const M0PLUS_NVIC_IPR5_IP_22_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR5_IP_21_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR5_IP_21_BITS: u32 = 49152;
+pub const M0PLUS_NVIC_IPR5_IP_21_MSB: u32 = 15;
+pub const M0PLUS_NVIC_IPR5_IP_21_LSB: u32 = 14;
+pub const M0PLUS_NVIC_IPR5_IP_21_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR5_IP_20_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR5_IP_20_BITS: u32 = 192;
+pub const M0PLUS_NVIC_IPR5_IP_20_MSB: u32 = 7;
+pub const M0PLUS_NVIC_IPR5_IP_20_LSB: u32 = 6;
+pub const M0PLUS_NVIC_IPR5_IP_20_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR6_OFFSET: u32 = 58392;
+pub const M0PLUS_NVIC_IPR6_BITS: u32 = 3233857728;
+pub const M0PLUS_NVIC_IPR6_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR6_IP_27_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR6_IP_27_BITS: u32 = 3221225472;
+pub const M0PLUS_NVIC_IPR6_IP_27_MSB: u32 = 31;
+pub const M0PLUS_NVIC_IPR6_IP_27_LSB: u32 = 30;
+pub const M0PLUS_NVIC_IPR6_IP_27_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR6_IP_26_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR6_IP_26_BITS: u32 = 12582912;
+pub const M0PLUS_NVIC_IPR6_IP_26_MSB: u32 = 23;
+pub const M0PLUS_NVIC_IPR6_IP_26_LSB: u32 = 22;
+pub const M0PLUS_NVIC_IPR6_IP_26_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR6_IP_25_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR6_IP_25_BITS: u32 = 49152;
+pub const M0PLUS_NVIC_IPR6_IP_25_MSB: u32 = 15;
+pub const M0PLUS_NVIC_IPR6_IP_25_LSB: u32 = 14;
+pub const M0PLUS_NVIC_IPR6_IP_25_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR6_IP_24_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR6_IP_24_BITS: u32 = 192;
+pub const M0PLUS_NVIC_IPR6_IP_24_MSB: u32 = 7;
+pub const M0PLUS_NVIC_IPR6_IP_24_LSB: u32 = 6;
+pub const M0PLUS_NVIC_IPR6_IP_24_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR7_OFFSET: u32 = 58396;
+pub const M0PLUS_NVIC_IPR7_BITS: u32 = 3233857728;
+pub const M0PLUS_NVIC_IPR7_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR7_IP_31_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR7_IP_31_BITS: u32 = 3221225472;
+pub const M0PLUS_NVIC_IPR7_IP_31_MSB: u32 = 31;
+pub const M0PLUS_NVIC_IPR7_IP_31_LSB: u32 = 30;
+pub const M0PLUS_NVIC_IPR7_IP_31_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR7_IP_30_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR7_IP_30_BITS: u32 = 12582912;
+pub const M0PLUS_NVIC_IPR7_IP_30_MSB: u32 = 23;
+pub const M0PLUS_NVIC_IPR7_IP_30_LSB: u32 = 22;
+pub const M0PLUS_NVIC_IPR7_IP_30_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR7_IP_29_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR7_IP_29_BITS: u32 = 49152;
+pub const M0PLUS_NVIC_IPR7_IP_29_MSB: u32 = 15;
+pub const M0PLUS_NVIC_IPR7_IP_29_LSB: u32 = 14;
+pub const M0PLUS_NVIC_IPR7_IP_29_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_NVIC_IPR7_IP_28_RESET: u32 = 0;
+pub const M0PLUS_NVIC_IPR7_IP_28_BITS: u32 = 192;
+pub const M0PLUS_NVIC_IPR7_IP_28_MSB: u32 = 7;
+pub const M0PLUS_NVIC_IPR7_IP_28_LSB: u32 = 6;
+pub const M0PLUS_NVIC_IPR7_IP_28_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_CPUID_OFFSET: u32 = 60672;
+pub const M0PLUS_CPUID_BITS: u32 = 4294967295;
+pub const M0PLUS_CPUID_RESET: u32 = 1091356161;
+pub const M0PLUS_CPUID_IMPLEMENTER_RESET: u32 = 65;
+pub const M0PLUS_CPUID_IMPLEMENTER_BITS: u32 = 4278190080;
+pub const M0PLUS_CPUID_IMPLEMENTER_MSB: u32 = 31;
+pub const M0PLUS_CPUID_IMPLEMENTER_LSB: u32 = 24;
+pub const M0PLUS_CPUID_IMPLEMENTER_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_CPUID_VARIANT_RESET: u32 = 0;
+pub const M0PLUS_CPUID_VARIANT_BITS: u32 = 15728640;
+pub const M0PLUS_CPUID_VARIANT_MSB: u32 = 23;
+pub const M0PLUS_CPUID_VARIANT_LSB: u32 = 20;
+pub const M0PLUS_CPUID_VARIANT_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_CPUID_ARCHITECTURE_RESET: u32 = 12;
+pub const M0PLUS_CPUID_ARCHITECTURE_BITS: u32 = 983040;
+pub const M0PLUS_CPUID_ARCHITECTURE_MSB: u32 = 19;
+pub const M0PLUS_CPUID_ARCHITECTURE_LSB: u32 = 16;
+pub const M0PLUS_CPUID_ARCHITECTURE_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_CPUID_PARTNO_RESET: u32 = 3168;
+pub const M0PLUS_CPUID_PARTNO_BITS: u32 = 65520;
+pub const M0PLUS_CPUID_PARTNO_MSB: u32 = 15;
+pub const M0PLUS_CPUID_PARTNO_LSB: u32 = 4;
+pub const M0PLUS_CPUID_PARTNO_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_CPUID_REVISION_RESET: u32 = 1;
+pub const M0PLUS_CPUID_REVISION_BITS: u32 = 15;
+pub const M0PLUS_CPUID_REVISION_MSB: u32 = 3;
+pub const M0PLUS_CPUID_REVISION_LSB: u32 = 0;
+pub const M0PLUS_CPUID_REVISION_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_ICSR_OFFSET: u32 = 60676;
+pub const M0PLUS_ICSR_BITS: u32 = 2665476607;
+pub const M0PLUS_ICSR_RESET: u32 = 0;
+pub const M0PLUS_ICSR_NMIPENDSET_RESET: u32 = 0;
+pub const M0PLUS_ICSR_NMIPENDSET_BITS: u32 = 2147483648;
+pub const M0PLUS_ICSR_NMIPENDSET_MSB: u32 = 31;
+pub const M0PLUS_ICSR_NMIPENDSET_LSB: u32 = 31;
+pub const M0PLUS_ICSR_NMIPENDSET_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_ICSR_PENDSVSET_RESET: u32 = 0;
+pub const M0PLUS_ICSR_PENDSVSET_BITS: u32 = 268435456;
+pub const M0PLUS_ICSR_PENDSVSET_MSB: u32 = 28;
+pub const M0PLUS_ICSR_PENDSVSET_LSB: u32 = 28;
+pub const M0PLUS_ICSR_PENDSVSET_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_ICSR_PENDSVCLR_RESET: u32 = 0;
+pub const M0PLUS_ICSR_PENDSVCLR_BITS: u32 = 134217728;
+pub const M0PLUS_ICSR_PENDSVCLR_MSB: u32 = 27;
+pub const M0PLUS_ICSR_PENDSVCLR_LSB: u32 = 27;
+pub const M0PLUS_ICSR_PENDSVCLR_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_ICSR_PENDSTSET_RESET: u32 = 0;
+pub const M0PLUS_ICSR_PENDSTSET_BITS: u32 = 67108864;
+pub const M0PLUS_ICSR_PENDSTSET_MSB: u32 = 26;
+pub const M0PLUS_ICSR_PENDSTSET_LSB: u32 = 26;
+pub const M0PLUS_ICSR_PENDSTSET_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_ICSR_PENDSTCLR_RESET: u32 = 0;
+pub const M0PLUS_ICSR_PENDSTCLR_BITS: u32 = 33554432;
+pub const M0PLUS_ICSR_PENDSTCLR_MSB: u32 = 25;
+pub const M0PLUS_ICSR_PENDSTCLR_LSB: u32 = 25;
+pub const M0PLUS_ICSR_PENDSTCLR_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_ICSR_ISRPREEMPT_RESET: u32 = 0;
+pub const M0PLUS_ICSR_ISRPREEMPT_BITS: u32 = 8388608;
+pub const M0PLUS_ICSR_ISRPREEMPT_MSB: u32 = 23;
+pub const M0PLUS_ICSR_ISRPREEMPT_LSB: u32 = 23;
+pub const M0PLUS_ICSR_ISRPREEMPT_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_ICSR_ISRPENDING_RESET: u32 = 0;
+pub const M0PLUS_ICSR_ISRPENDING_BITS: u32 = 4194304;
+pub const M0PLUS_ICSR_ISRPENDING_MSB: u32 = 22;
+pub const M0PLUS_ICSR_ISRPENDING_LSB: u32 = 22;
+pub const M0PLUS_ICSR_ISRPENDING_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_ICSR_VECTPENDING_RESET: u32 = 0;
+pub const M0PLUS_ICSR_VECTPENDING_BITS: u32 = 2093056;
+pub const M0PLUS_ICSR_VECTPENDING_MSB: u32 = 20;
+pub const M0PLUS_ICSR_VECTPENDING_LSB: u32 = 12;
+pub const M0PLUS_ICSR_VECTPENDING_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_ICSR_VECTACTIVE_RESET: u32 = 0;
+pub const M0PLUS_ICSR_VECTACTIVE_BITS: u32 = 511;
+pub const M0PLUS_ICSR_VECTACTIVE_MSB: u32 = 8;
+pub const M0PLUS_ICSR_VECTACTIVE_LSB: u32 = 0;
+pub const M0PLUS_ICSR_VECTACTIVE_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_VTOR_OFFSET: u32 = 60680;
+pub const M0PLUS_VTOR_BITS: u32 = 4294967040;
+pub const M0PLUS_VTOR_RESET: u32 = 0;
+pub const M0PLUS_VTOR_TBLOFF_RESET: u32 = 0;
+pub const M0PLUS_VTOR_TBLOFF_BITS: u32 = 4294967040;
+pub const M0PLUS_VTOR_TBLOFF_MSB: u32 = 31;
+pub const M0PLUS_VTOR_TBLOFF_LSB: u32 = 8;
+pub const M0PLUS_VTOR_TBLOFF_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_AIRCR_OFFSET: u32 = 60684;
+pub const M0PLUS_AIRCR_BITS: u32 = 4294934534;
+pub const M0PLUS_AIRCR_RESET: u32 = 0;
+pub const M0PLUS_AIRCR_VECTKEY_RESET: u32 = 0;
+pub const M0PLUS_AIRCR_VECTKEY_BITS: u32 = 4294901760;
+pub const M0PLUS_AIRCR_VECTKEY_MSB: u32 = 31;
+pub const M0PLUS_AIRCR_VECTKEY_LSB: u32 = 16;
+pub const M0PLUS_AIRCR_VECTKEY_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_AIRCR_ENDIANESS_RESET: u32 = 0;
+pub const M0PLUS_AIRCR_ENDIANESS_BITS: u32 = 32768;
+pub const M0PLUS_AIRCR_ENDIANESS_MSB: u32 = 15;
+pub const M0PLUS_AIRCR_ENDIANESS_LSB: u32 = 15;
+pub const M0PLUS_AIRCR_ENDIANESS_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_AIRCR_SYSRESETREQ_RESET: u32 = 0;
+pub const M0PLUS_AIRCR_SYSRESETREQ_BITS: u32 = 4;
+pub const M0PLUS_AIRCR_SYSRESETREQ_MSB: u32 = 2;
+pub const M0PLUS_AIRCR_SYSRESETREQ_LSB: u32 = 2;
+pub const M0PLUS_AIRCR_SYSRESETREQ_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_AIRCR_VECTCLRACTIVE_RESET: u32 = 0;
+pub const M0PLUS_AIRCR_VECTCLRACTIVE_BITS: u32 = 2;
+pub const M0PLUS_AIRCR_VECTCLRACTIVE_MSB: u32 = 1;
+pub const M0PLUS_AIRCR_VECTCLRACTIVE_LSB: u32 = 1;
+pub const M0PLUS_AIRCR_VECTCLRACTIVE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_SCR_OFFSET: u32 = 60688;
+pub const M0PLUS_SCR_BITS: u32 = 22;
+pub const M0PLUS_SCR_RESET: u32 = 0;
+pub const M0PLUS_SCR_SEVONPEND_RESET: u32 = 0;
+pub const M0PLUS_SCR_SEVONPEND_BITS: u32 = 16;
+pub const M0PLUS_SCR_SEVONPEND_MSB: u32 = 4;
+pub const M0PLUS_SCR_SEVONPEND_LSB: u32 = 4;
+pub const M0PLUS_SCR_SEVONPEND_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_SCR_SLEEPDEEP_RESET: u32 = 0;
+pub const M0PLUS_SCR_SLEEPDEEP_BITS: u32 = 4;
+pub const M0PLUS_SCR_SLEEPDEEP_MSB: u32 = 2;
+pub const M0PLUS_SCR_SLEEPDEEP_LSB: u32 = 2;
+pub const M0PLUS_SCR_SLEEPDEEP_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_SCR_SLEEPONEXIT_RESET: u32 = 0;
+pub const M0PLUS_SCR_SLEEPONEXIT_BITS: u32 = 2;
+pub const M0PLUS_SCR_SLEEPONEXIT_MSB: u32 = 1;
+pub const M0PLUS_SCR_SLEEPONEXIT_LSB: u32 = 1;
+pub const M0PLUS_SCR_SLEEPONEXIT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_CCR_OFFSET: u32 = 60692;
+pub const M0PLUS_CCR_BITS: u32 = 520;
+pub const M0PLUS_CCR_RESET: u32 = 0;
+pub const M0PLUS_CCR_STKALIGN_RESET: u32 = 0;
+pub const M0PLUS_CCR_STKALIGN_BITS: u32 = 512;
+pub const M0PLUS_CCR_STKALIGN_MSB: u32 = 9;
+pub const M0PLUS_CCR_STKALIGN_LSB: u32 = 9;
+pub const M0PLUS_CCR_STKALIGN_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_CCR_UNALIGN_TRP_RESET: u32 = 0;
+pub const M0PLUS_CCR_UNALIGN_TRP_BITS: u32 = 8;
+pub const M0PLUS_CCR_UNALIGN_TRP_MSB: u32 = 3;
+pub const M0PLUS_CCR_UNALIGN_TRP_LSB: u32 = 3;
+pub const M0PLUS_CCR_UNALIGN_TRP_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_SHPR2_OFFSET: u32 = 60700;
+pub const M0PLUS_SHPR2_BITS: u32 = 3221225472;
+pub const M0PLUS_SHPR2_RESET: u32 = 0;
+pub const M0PLUS_SHPR2_PRI_11_RESET: u32 = 0;
+pub const M0PLUS_SHPR2_PRI_11_BITS: u32 = 3221225472;
+pub const M0PLUS_SHPR2_PRI_11_MSB: u32 = 31;
+pub const M0PLUS_SHPR2_PRI_11_LSB: u32 = 30;
+pub const M0PLUS_SHPR2_PRI_11_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_SHPR3_OFFSET: u32 = 60704;
+pub const M0PLUS_SHPR3_BITS: u32 = 3233808384;
+pub const M0PLUS_SHPR3_RESET: u32 = 0;
+pub const M0PLUS_SHPR3_PRI_15_RESET: u32 = 0;
+pub const M0PLUS_SHPR3_PRI_15_BITS: u32 = 3221225472;
+pub const M0PLUS_SHPR3_PRI_15_MSB: u32 = 31;
+pub const M0PLUS_SHPR3_PRI_15_LSB: u32 = 30;
+pub const M0PLUS_SHPR3_PRI_15_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_SHPR3_PRI_14_RESET: u32 = 0;
+pub const M0PLUS_SHPR3_PRI_14_BITS: u32 = 12582912;
+pub const M0PLUS_SHPR3_PRI_14_MSB: u32 = 23;
+pub const M0PLUS_SHPR3_PRI_14_LSB: u32 = 22;
+pub const M0PLUS_SHPR3_PRI_14_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_SHCSR_OFFSET: u32 = 60708;
+pub const M0PLUS_SHCSR_BITS: u32 = 32768;
+pub const M0PLUS_SHCSR_RESET: u32 = 0;
+pub const M0PLUS_SHCSR_SVCALLPENDED_RESET: u32 = 0;
+pub const M0PLUS_SHCSR_SVCALLPENDED_BITS: u32 = 32768;
+pub const M0PLUS_SHCSR_SVCALLPENDED_MSB: u32 = 15;
+pub const M0PLUS_SHCSR_SVCALLPENDED_LSB: u32 = 15;
+pub const M0PLUS_SHCSR_SVCALLPENDED_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_MPU_TYPE_OFFSET: u32 = 60816;
+pub const M0PLUS_MPU_TYPE_BITS: u32 = 16776961;
+pub const M0PLUS_MPU_TYPE_RESET: u32 = 2048;
+pub const M0PLUS_MPU_TYPE_IREGION_RESET: u32 = 0;
+pub const M0PLUS_MPU_TYPE_IREGION_BITS: u32 = 16711680;
+pub const M0PLUS_MPU_TYPE_IREGION_MSB: u32 = 23;
+pub const M0PLUS_MPU_TYPE_IREGION_LSB: u32 = 16;
+pub const M0PLUS_MPU_TYPE_IREGION_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_MPU_TYPE_DREGION_RESET: u32 = 8;
+pub const M0PLUS_MPU_TYPE_DREGION_BITS: u32 = 65280;
+pub const M0PLUS_MPU_TYPE_DREGION_MSB: u32 = 15;
+pub const M0PLUS_MPU_TYPE_DREGION_LSB: u32 = 8;
+pub const M0PLUS_MPU_TYPE_DREGION_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_MPU_TYPE_SEPARATE_RESET: u32 = 0;
+pub const M0PLUS_MPU_TYPE_SEPARATE_BITS: u32 = 1;
+pub const M0PLUS_MPU_TYPE_SEPARATE_MSB: u32 = 0;
+pub const M0PLUS_MPU_TYPE_SEPARATE_LSB: u32 = 0;
+pub const M0PLUS_MPU_TYPE_SEPARATE_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const M0PLUS_MPU_CTRL_OFFSET: u32 = 60820;
+pub const M0PLUS_MPU_CTRL_BITS: u32 = 7;
+pub const M0PLUS_MPU_CTRL_RESET: u32 = 0;
+pub const M0PLUS_MPU_CTRL_PRIVDEFENA_RESET: u32 = 0;
+pub const M0PLUS_MPU_CTRL_PRIVDEFENA_BITS: u32 = 4;
+pub const M0PLUS_MPU_CTRL_PRIVDEFENA_MSB: u32 = 2;
+pub const M0PLUS_MPU_CTRL_PRIVDEFENA_LSB: u32 = 2;
+pub const M0PLUS_MPU_CTRL_PRIVDEFENA_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_MPU_CTRL_HFNMIENA_RESET: u32 = 0;
+pub const M0PLUS_MPU_CTRL_HFNMIENA_BITS: u32 = 2;
+pub const M0PLUS_MPU_CTRL_HFNMIENA_MSB: u32 = 1;
+pub const M0PLUS_MPU_CTRL_HFNMIENA_LSB: u32 = 1;
+pub const M0PLUS_MPU_CTRL_HFNMIENA_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_MPU_CTRL_ENABLE_RESET: u32 = 0;
+pub const M0PLUS_MPU_CTRL_ENABLE_BITS: u32 = 1;
+pub const M0PLUS_MPU_CTRL_ENABLE_MSB: u32 = 0;
+pub const M0PLUS_MPU_CTRL_ENABLE_LSB: u32 = 0;
+pub const M0PLUS_MPU_CTRL_ENABLE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_MPU_RNR_OFFSET: u32 = 60824;
+pub const M0PLUS_MPU_RNR_BITS: u32 = 15;
+pub const M0PLUS_MPU_RNR_RESET: u32 = 0;
+pub const M0PLUS_MPU_RNR_REGION_RESET: u32 = 0;
+pub const M0PLUS_MPU_RNR_REGION_BITS: u32 = 15;
+pub const M0PLUS_MPU_RNR_REGION_MSB: u32 = 3;
+pub const M0PLUS_MPU_RNR_REGION_LSB: u32 = 0;
+pub const M0PLUS_MPU_RNR_REGION_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_MPU_RBAR_OFFSET: u32 = 60828;
+pub const M0PLUS_MPU_RBAR_BITS: u32 = 4294967071;
+pub const M0PLUS_MPU_RBAR_RESET: u32 = 0;
+pub const M0PLUS_MPU_RBAR_ADDR_RESET: u32 = 0;
+pub const M0PLUS_MPU_RBAR_ADDR_BITS: u32 = 4294967040;
+pub const M0PLUS_MPU_RBAR_ADDR_MSB: u32 = 31;
+pub const M0PLUS_MPU_RBAR_ADDR_LSB: u32 = 8;
+pub const M0PLUS_MPU_RBAR_ADDR_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_MPU_RBAR_VALID_RESET: u32 = 0;
+pub const M0PLUS_MPU_RBAR_VALID_BITS: u32 = 16;
+pub const M0PLUS_MPU_RBAR_VALID_MSB: u32 = 4;
+pub const M0PLUS_MPU_RBAR_VALID_LSB: u32 = 4;
+pub const M0PLUS_MPU_RBAR_VALID_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_MPU_RBAR_REGION_RESET: u32 = 0;
+pub const M0PLUS_MPU_RBAR_REGION_BITS: u32 = 15;
+pub const M0PLUS_MPU_RBAR_REGION_MSB: u32 = 3;
+pub const M0PLUS_MPU_RBAR_REGION_LSB: u32 = 0;
+pub const M0PLUS_MPU_RBAR_REGION_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_MPU_RASR_OFFSET: u32 = 60832;
+pub const M0PLUS_MPU_RASR_BITS: u32 = 4294967103;
+pub const M0PLUS_MPU_RASR_RESET: u32 = 0;
+pub const M0PLUS_MPU_RASR_ATTRS_RESET: u32 = 0;
+pub const M0PLUS_MPU_RASR_ATTRS_BITS: u32 = 4294901760;
+pub const M0PLUS_MPU_RASR_ATTRS_MSB: u32 = 31;
+pub const M0PLUS_MPU_RASR_ATTRS_LSB: u32 = 16;
+pub const M0PLUS_MPU_RASR_ATTRS_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_MPU_RASR_SRD_RESET: u32 = 0;
+pub const M0PLUS_MPU_RASR_SRD_BITS: u32 = 65280;
+pub const M0PLUS_MPU_RASR_SRD_MSB: u32 = 15;
+pub const M0PLUS_MPU_RASR_SRD_LSB: u32 = 8;
+pub const M0PLUS_MPU_RASR_SRD_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_MPU_RASR_SIZE_RESET: u32 = 0;
+pub const M0PLUS_MPU_RASR_SIZE_BITS: u32 = 62;
+pub const M0PLUS_MPU_RASR_SIZE_MSB: u32 = 5;
+pub const M0PLUS_MPU_RASR_SIZE_LSB: u32 = 1;
+pub const M0PLUS_MPU_RASR_SIZE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const M0PLUS_MPU_RASR_ENABLE_RESET: u32 = 0;
+pub const M0PLUS_MPU_RASR_ENABLE_BITS: u32 = 1;
+pub const M0PLUS_MPU_RASR_ENABLE_MSB: u32 = 0;
+pub const M0PLUS_MPU_RASR_ENABLE_LSB: u32 = 0;
+pub const M0PLUS_MPU_RASR_ENABLE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PICO_DEFAULT_IRQ_PRIORITY: u32 = 128;
+pub const PICO_LOWEST_IRQ_PRIORITY: u32 = 1;
+pub const PICO_HIGHEST_IRQ_PRIORITY: u32 = 255;
+pub const PICO_SHARED_IRQ_HANDLER_DEFAULT_ORDER_PRIORITY: u32 = 128;
+pub const PARAM_ASSERTIONS_ENABLED_IRQ: u32 = 0;
+pub const PWM_CH0_CSR_OFFSET: u32 = 0;
+pub const PWM_CH0_CSR_BITS: u32 = 255;
+pub const PWM_CH0_CSR_RESET: u32 = 0;
+pub const PWM_CH0_CSR_PH_ADV_RESET: u32 = 0;
+pub const PWM_CH0_CSR_PH_ADV_BITS: u32 = 128;
+pub const PWM_CH0_CSR_PH_ADV_MSB: u32 = 7;
+pub const PWM_CH0_CSR_PH_ADV_LSB: u32 = 7;
+pub const PWM_CH0_CSR_PH_ADV_ACCESS: &'static [u8; 3usize] = b"SC\0";
+pub const PWM_CH0_CSR_PH_RET_RESET: u32 = 0;
+pub const PWM_CH0_CSR_PH_RET_BITS: u32 = 64;
+pub const PWM_CH0_CSR_PH_RET_MSB: u32 = 6;
+pub const PWM_CH0_CSR_PH_RET_LSB: u32 = 6;
+pub const PWM_CH0_CSR_PH_RET_ACCESS: &'static [u8; 3usize] = b"SC\0";
+pub const PWM_CH0_CSR_DIVMODE_RESET: u32 = 0;
+pub const PWM_CH0_CSR_DIVMODE_BITS: u32 = 48;
+pub const PWM_CH0_CSR_DIVMODE_MSB: u32 = 5;
+pub const PWM_CH0_CSR_DIVMODE_LSB: u32 = 4;
+pub const PWM_CH0_CSR_DIVMODE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH0_CSR_DIVMODE_VALUE_DIV: u32 = 0;
+pub const PWM_CH0_CSR_DIVMODE_VALUE_LEVEL: u32 = 1;
+pub const PWM_CH0_CSR_DIVMODE_VALUE_RISE: u32 = 2;
+pub const PWM_CH0_CSR_DIVMODE_VALUE_FALL: u32 = 3;
+pub const PWM_CH0_CSR_B_INV_RESET: u32 = 0;
+pub const PWM_CH0_CSR_B_INV_BITS: u32 = 8;
+pub const PWM_CH0_CSR_B_INV_MSB: u32 = 3;
+pub const PWM_CH0_CSR_B_INV_LSB: u32 = 3;
+pub const PWM_CH0_CSR_B_INV_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH0_CSR_A_INV_RESET: u32 = 0;
+pub const PWM_CH0_CSR_A_INV_BITS: u32 = 4;
+pub const PWM_CH0_CSR_A_INV_MSB: u32 = 2;
+pub const PWM_CH0_CSR_A_INV_LSB: u32 = 2;
+pub const PWM_CH0_CSR_A_INV_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH0_CSR_PH_CORRECT_RESET: u32 = 0;
+pub const PWM_CH0_CSR_PH_CORRECT_BITS: u32 = 2;
+pub const PWM_CH0_CSR_PH_CORRECT_MSB: u32 = 1;
+pub const PWM_CH0_CSR_PH_CORRECT_LSB: u32 = 1;
+pub const PWM_CH0_CSR_PH_CORRECT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH0_CSR_EN_RESET: u32 = 0;
+pub const PWM_CH0_CSR_EN_BITS: u32 = 1;
+pub const PWM_CH0_CSR_EN_MSB: u32 = 0;
+pub const PWM_CH0_CSR_EN_LSB: u32 = 0;
+pub const PWM_CH0_CSR_EN_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH0_DIV_OFFSET: u32 = 4;
+pub const PWM_CH0_DIV_BITS: u32 = 4095;
+pub const PWM_CH0_DIV_RESET: u32 = 16;
+pub const PWM_CH0_DIV_INT_RESET: u32 = 1;
+pub const PWM_CH0_DIV_INT_BITS: u32 = 4080;
+pub const PWM_CH0_DIV_INT_MSB: u32 = 11;
+pub const PWM_CH0_DIV_INT_LSB: u32 = 4;
+pub const PWM_CH0_DIV_INT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH0_DIV_FRAC_RESET: u32 = 0;
+pub const PWM_CH0_DIV_FRAC_BITS: u32 = 15;
+pub const PWM_CH0_DIV_FRAC_MSB: u32 = 3;
+pub const PWM_CH0_DIV_FRAC_LSB: u32 = 0;
+pub const PWM_CH0_DIV_FRAC_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH0_CTR_OFFSET: u32 = 8;
+pub const PWM_CH0_CTR_BITS: u32 = 65535;
+pub const PWM_CH0_CTR_RESET: u32 = 0;
+pub const PWM_CH0_CTR_MSB: u32 = 15;
+pub const PWM_CH0_CTR_LSB: u32 = 0;
+pub const PWM_CH0_CTR_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH0_CC_OFFSET: u32 = 12;
+pub const PWM_CH0_CC_BITS: u32 = 4294967295;
+pub const PWM_CH0_CC_RESET: u32 = 0;
+pub const PWM_CH0_CC_B_RESET: u32 = 0;
+pub const PWM_CH0_CC_B_BITS: u32 = 4294901760;
+pub const PWM_CH0_CC_B_MSB: u32 = 31;
+pub const PWM_CH0_CC_B_LSB: u32 = 16;
+pub const PWM_CH0_CC_B_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH0_CC_A_RESET: u32 = 0;
+pub const PWM_CH0_CC_A_BITS: u32 = 65535;
+pub const PWM_CH0_CC_A_MSB: u32 = 15;
+pub const PWM_CH0_CC_A_LSB: u32 = 0;
+pub const PWM_CH0_CC_A_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH0_TOP_OFFSET: u32 = 16;
+pub const PWM_CH0_TOP_BITS: u32 = 65535;
+pub const PWM_CH0_TOP_RESET: u32 = 65535;
+pub const PWM_CH0_TOP_MSB: u32 = 15;
+pub const PWM_CH0_TOP_LSB: u32 = 0;
+pub const PWM_CH0_TOP_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH1_CSR_OFFSET: u32 = 20;
+pub const PWM_CH1_CSR_BITS: u32 = 255;
+pub const PWM_CH1_CSR_RESET: u32 = 0;
+pub const PWM_CH1_CSR_PH_ADV_RESET: u32 = 0;
+pub const PWM_CH1_CSR_PH_ADV_BITS: u32 = 128;
+pub const PWM_CH1_CSR_PH_ADV_MSB: u32 = 7;
+pub const PWM_CH1_CSR_PH_ADV_LSB: u32 = 7;
+pub const PWM_CH1_CSR_PH_ADV_ACCESS: &'static [u8; 3usize] = b"SC\0";
+pub const PWM_CH1_CSR_PH_RET_RESET: u32 = 0;
+pub const PWM_CH1_CSR_PH_RET_BITS: u32 = 64;
+pub const PWM_CH1_CSR_PH_RET_MSB: u32 = 6;
+pub const PWM_CH1_CSR_PH_RET_LSB: u32 = 6;
+pub const PWM_CH1_CSR_PH_RET_ACCESS: &'static [u8; 3usize] = b"SC\0";
+pub const PWM_CH1_CSR_DIVMODE_RESET: u32 = 0;
+pub const PWM_CH1_CSR_DIVMODE_BITS: u32 = 48;
+pub const PWM_CH1_CSR_DIVMODE_MSB: u32 = 5;
+pub const PWM_CH1_CSR_DIVMODE_LSB: u32 = 4;
+pub const PWM_CH1_CSR_DIVMODE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH1_CSR_DIVMODE_VALUE_DIV: u32 = 0;
+pub const PWM_CH1_CSR_DIVMODE_VALUE_LEVEL: u32 = 1;
+pub const PWM_CH1_CSR_DIVMODE_VALUE_RISE: u32 = 2;
+pub const PWM_CH1_CSR_DIVMODE_VALUE_FALL: u32 = 3;
+pub const PWM_CH1_CSR_B_INV_RESET: u32 = 0;
+pub const PWM_CH1_CSR_B_INV_BITS: u32 = 8;
+pub const PWM_CH1_CSR_B_INV_MSB: u32 = 3;
+pub const PWM_CH1_CSR_B_INV_LSB: u32 = 3;
+pub const PWM_CH1_CSR_B_INV_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH1_CSR_A_INV_RESET: u32 = 0;
+pub const PWM_CH1_CSR_A_INV_BITS: u32 = 4;
+pub const PWM_CH1_CSR_A_INV_MSB: u32 = 2;
+pub const PWM_CH1_CSR_A_INV_LSB: u32 = 2;
+pub const PWM_CH1_CSR_A_INV_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH1_CSR_PH_CORRECT_RESET: u32 = 0;
+pub const PWM_CH1_CSR_PH_CORRECT_BITS: u32 = 2;
+pub const PWM_CH1_CSR_PH_CORRECT_MSB: u32 = 1;
+pub const PWM_CH1_CSR_PH_CORRECT_LSB: u32 = 1;
+pub const PWM_CH1_CSR_PH_CORRECT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH1_CSR_EN_RESET: u32 = 0;
+pub const PWM_CH1_CSR_EN_BITS: u32 = 1;
+pub const PWM_CH1_CSR_EN_MSB: u32 = 0;
+pub const PWM_CH1_CSR_EN_LSB: u32 = 0;
+pub const PWM_CH1_CSR_EN_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH1_DIV_OFFSET: u32 = 24;
+pub const PWM_CH1_DIV_BITS: u32 = 4095;
+pub const PWM_CH1_DIV_RESET: u32 = 16;
+pub const PWM_CH1_DIV_INT_RESET: u32 = 1;
+pub const PWM_CH1_DIV_INT_BITS: u32 = 4080;
+pub const PWM_CH1_DIV_INT_MSB: u32 = 11;
+pub const PWM_CH1_DIV_INT_LSB: u32 = 4;
+pub const PWM_CH1_DIV_INT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH1_DIV_FRAC_RESET: u32 = 0;
+pub const PWM_CH1_DIV_FRAC_BITS: u32 = 15;
+pub const PWM_CH1_DIV_FRAC_MSB: u32 = 3;
+pub const PWM_CH1_DIV_FRAC_LSB: u32 = 0;
+pub const PWM_CH1_DIV_FRAC_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH1_CTR_OFFSET: u32 = 28;
+pub const PWM_CH1_CTR_BITS: u32 = 65535;
+pub const PWM_CH1_CTR_RESET: u32 = 0;
+pub const PWM_CH1_CTR_MSB: u32 = 15;
+pub const PWM_CH1_CTR_LSB: u32 = 0;
+pub const PWM_CH1_CTR_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH1_CC_OFFSET: u32 = 32;
+pub const PWM_CH1_CC_BITS: u32 = 4294967295;
+pub const PWM_CH1_CC_RESET: u32 = 0;
+pub const PWM_CH1_CC_B_RESET: u32 = 0;
+pub const PWM_CH1_CC_B_BITS: u32 = 4294901760;
+pub const PWM_CH1_CC_B_MSB: u32 = 31;
+pub const PWM_CH1_CC_B_LSB: u32 = 16;
+pub const PWM_CH1_CC_B_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH1_CC_A_RESET: u32 = 0;
+pub const PWM_CH1_CC_A_BITS: u32 = 65535;
+pub const PWM_CH1_CC_A_MSB: u32 = 15;
+pub const PWM_CH1_CC_A_LSB: u32 = 0;
+pub const PWM_CH1_CC_A_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH1_TOP_OFFSET: u32 = 36;
+pub const PWM_CH1_TOP_BITS: u32 = 65535;
+pub const PWM_CH1_TOP_RESET: u32 = 65535;
+pub const PWM_CH1_TOP_MSB: u32 = 15;
+pub const PWM_CH1_TOP_LSB: u32 = 0;
+pub const PWM_CH1_TOP_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH2_CSR_OFFSET: u32 = 40;
+pub const PWM_CH2_CSR_BITS: u32 = 255;
+pub const PWM_CH2_CSR_RESET: u32 = 0;
+pub const PWM_CH2_CSR_PH_ADV_RESET: u32 = 0;
+pub const PWM_CH2_CSR_PH_ADV_BITS: u32 = 128;
+pub const PWM_CH2_CSR_PH_ADV_MSB: u32 = 7;
+pub const PWM_CH2_CSR_PH_ADV_LSB: u32 = 7;
+pub const PWM_CH2_CSR_PH_ADV_ACCESS: &'static [u8; 3usize] = b"SC\0";
+pub const PWM_CH2_CSR_PH_RET_RESET: u32 = 0;
+pub const PWM_CH2_CSR_PH_RET_BITS: u32 = 64;
+pub const PWM_CH2_CSR_PH_RET_MSB: u32 = 6;
+pub const PWM_CH2_CSR_PH_RET_LSB: u32 = 6;
+pub const PWM_CH2_CSR_PH_RET_ACCESS: &'static [u8; 3usize] = b"SC\0";
+pub const PWM_CH2_CSR_DIVMODE_RESET: u32 = 0;
+pub const PWM_CH2_CSR_DIVMODE_BITS: u32 = 48;
+pub const PWM_CH2_CSR_DIVMODE_MSB: u32 = 5;
+pub const PWM_CH2_CSR_DIVMODE_LSB: u32 = 4;
+pub const PWM_CH2_CSR_DIVMODE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH2_CSR_DIVMODE_VALUE_DIV: u32 = 0;
+pub const PWM_CH2_CSR_DIVMODE_VALUE_LEVEL: u32 = 1;
+pub const PWM_CH2_CSR_DIVMODE_VALUE_RISE: u32 = 2;
+pub const PWM_CH2_CSR_DIVMODE_VALUE_FALL: u32 = 3;
+pub const PWM_CH2_CSR_B_INV_RESET: u32 = 0;
+pub const PWM_CH2_CSR_B_INV_BITS: u32 = 8;
+pub const PWM_CH2_CSR_B_INV_MSB: u32 = 3;
+pub const PWM_CH2_CSR_B_INV_LSB: u32 = 3;
+pub const PWM_CH2_CSR_B_INV_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH2_CSR_A_INV_RESET: u32 = 0;
+pub const PWM_CH2_CSR_A_INV_BITS: u32 = 4;
+pub const PWM_CH2_CSR_A_INV_MSB: u32 = 2;
+pub const PWM_CH2_CSR_A_INV_LSB: u32 = 2;
+pub const PWM_CH2_CSR_A_INV_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH2_CSR_PH_CORRECT_RESET: u32 = 0;
+pub const PWM_CH2_CSR_PH_CORRECT_BITS: u32 = 2;
+pub const PWM_CH2_CSR_PH_CORRECT_MSB: u32 = 1;
+pub const PWM_CH2_CSR_PH_CORRECT_LSB: u32 = 1;
+pub const PWM_CH2_CSR_PH_CORRECT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH2_CSR_EN_RESET: u32 = 0;
+pub const PWM_CH2_CSR_EN_BITS: u32 = 1;
+pub const PWM_CH2_CSR_EN_MSB: u32 = 0;
+pub const PWM_CH2_CSR_EN_LSB: u32 = 0;
+pub const PWM_CH2_CSR_EN_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH2_DIV_OFFSET: u32 = 44;
+pub const PWM_CH2_DIV_BITS: u32 = 4095;
+pub const PWM_CH2_DIV_RESET: u32 = 16;
+pub const PWM_CH2_DIV_INT_RESET: u32 = 1;
+pub const PWM_CH2_DIV_INT_BITS: u32 = 4080;
+pub const PWM_CH2_DIV_INT_MSB: u32 = 11;
+pub const PWM_CH2_DIV_INT_LSB: u32 = 4;
+pub const PWM_CH2_DIV_INT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH2_DIV_FRAC_RESET: u32 = 0;
+pub const PWM_CH2_DIV_FRAC_BITS: u32 = 15;
+pub const PWM_CH2_DIV_FRAC_MSB: u32 = 3;
+pub const PWM_CH2_DIV_FRAC_LSB: u32 = 0;
+pub const PWM_CH2_DIV_FRAC_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH2_CTR_OFFSET: u32 = 48;
+pub const PWM_CH2_CTR_BITS: u32 = 65535;
+pub const PWM_CH2_CTR_RESET: u32 = 0;
+pub const PWM_CH2_CTR_MSB: u32 = 15;
+pub const PWM_CH2_CTR_LSB: u32 = 0;
+pub const PWM_CH2_CTR_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH2_CC_OFFSET: u32 = 52;
+pub const PWM_CH2_CC_BITS: u32 = 4294967295;
+pub const PWM_CH2_CC_RESET: u32 = 0;
+pub const PWM_CH2_CC_B_RESET: u32 = 0;
+pub const PWM_CH2_CC_B_BITS: u32 = 4294901760;
+pub const PWM_CH2_CC_B_MSB: u32 = 31;
+pub const PWM_CH2_CC_B_LSB: u32 = 16;
+pub const PWM_CH2_CC_B_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH2_CC_A_RESET: u32 = 0;
+pub const PWM_CH2_CC_A_BITS: u32 = 65535;
+pub const PWM_CH2_CC_A_MSB: u32 = 15;
+pub const PWM_CH2_CC_A_LSB: u32 = 0;
+pub const PWM_CH2_CC_A_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH2_TOP_OFFSET: u32 = 56;
+pub const PWM_CH2_TOP_BITS: u32 = 65535;
+pub const PWM_CH2_TOP_RESET: u32 = 65535;
+pub const PWM_CH2_TOP_MSB: u32 = 15;
+pub const PWM_CH2_TOP_LSB: u32 = 0;
+pub const PWM_CH2_TOP_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH3_CSR_OFFSET: u32 = 60;
+pub const PWM_CH3_CSR_BITS: u32 = 255;
+pub const PWM_CH3_CSR_RESET: u32 = 0;
+pub const PWM_CH3_CSR_PH_ADV_RESET: u32 = 0;
+pub const PWM_CH3_CSR_PH_ADV_BITS: u32 = 128;
+pub const PWM_CH3_CSR_PH_ADV_MSB: u32 = 7;
+pub const PWM_CH3_CSR_PH_ADV_LSB: u32 = 7;
+pub const PWM_CH3_CSR_PH_ADV_ACCESS: &'static [u8; 3usize] = b"SC\0";
+pub const PWM_CH3_CSR_PH_RET_RESET: u32 = 0;
+pub const PWM_CH3_CSR_PH_RET_BITS: u32 = 64;
+pub const PWM_CH3_CSR_PH_RET_MSB: u32 = 6;
+pub const PWM_CH3_CSR_PH_RET_LSB: u32 = 6;
+pub const PWM_CH3_CSR_PH_RET_ACCESS: &'static [u8; 3usize] = b"SC\0";
+pub const PWM_CH3_CSR_DIVMODE_RESET: u32 = 0;
+pub const PWM_CH3_CSR_DIVMODE_BITS: u32 = 48;
+pub const PWM_CH3_CSR_DIVMODE_MSB: u32 = 5;
+pub const PWM_CH3_CSR_DIVMODE_LSB: u32 = 4;
+pub const PWM_CH3_CSR_DIVMODE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH3_CSR_DIVMODE_VALUE_DIV: u32 = 0;
+pub const PWM_CH3_CSR_DIVMODE_VALUE_LEVEL: u32 = 1;
+pub const PWM_CH3_CSR_DIVMODE_VALUE_RISE: u32 = 2;
+pub const PWM_CH3_CSR_DIVMODE_VALUE_FALL: u32 = 3;
+pub const PWM_CH3_CSR_B_INV_RESET: u32 = 0;
+pub const PWM_CH3_CSR_B_INV_BITS: u32 = 8;
+pub const PWM_CH3_CSR_B_INV_MSB: u32 = 3;
+pub const PWM_CH3_CSR_B_INV_LSB: u32 = 3;
+pub const PWM_CH3_CSR_B_INV_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH3_CSR_A_INV_RESET: u32 = 0;
+pub const PWM_CH3_CSR_A_INV_BITS: u32 = 4;
+pub const PWM_CH3_CSR_A_INV_MSB: u32 = 2;
+pub const PWM_CH3_CSR_A_INV_LSB: u32 = 2;
+pub const PWM_CH3_CSR_A_INV_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH3_CSR_PH_CORRECT_RESET: u32 = 0;
+pub const PWM_CH3_CSR_PH_CORRECT_BITS: u32 = 2;
+pub const PWM_CH3_CSR_PH_CORRECT_MSB: u32 = 1;
+pub const PWM_CH3_CSR_PH_CORRECT_LSB: u32 = 1;
+pub const PWM_CH3_CSR_PH_CORRECT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH3_CSR_EN_RESET: u32 = 0;
+pub const PWM_CH3_CSR_EN_BITS: u32 = 1;
+pub const PWM_CH3_CSR_EN_MSB: u32 = 0;
+pub const PWM_CH3_CSR_EN_LSB: u32 = 0;
+pub const PWM_CH3_CSR_EN_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH3_DIV_OFFSET: u32 = 64;
+pub const PWM_CH3_DIV_BITS: u32 = 4095;
+pub const PWM_CH3_DIV_RESET: u32 = 16;
+pub const PWM_CH3_DIV_INT_RESET: u32 = 1;
+pub const PWM_CH3_DIV_INT_BITS: u32 = 4080;
+pub const PWM_CH3_DIV_INT_MSB: u32 = 11;
+pub const PWM_CH3_DIV_INT_LSB: u32 = 4;
+pub const PWM_CH3_DIV_INT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH3_DIV_FRAC_RESET: u32 = 0;
+pub const PWM_CH3_DIV_FRAC_BITS: u32 = 15;
+pub const PWM_CH3_DIV_FRAC_MSB: u32 = 3;
+pub const PWM_CH3_DIV_FRAC_LSB: u32 = 0;
+pub const PWM_CH3_DIV_FRAC_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH3_CTR_OFFSET: u32 = 68;
+pub const PWM_CH3_CTR_BITS: u32 = 65535;
+pub const PWM_CH3_CTR_RESET: u32 = 0;
+pub const PWM_CH3_CTR_MSB: u32 = 15;
+pub const PWM_CH3_CTR_LSB: u32 = 0;
+pub const PWM_CH3_CTR_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH3_CC_OFFSET: u32 = 72;
+pub const PWM_CH3_CC_BITS: u32 = 4294967295;
+pub const PWM_CH3_CC_RESET: u32 = 0;
+pub const PWM_CH3_CC_B_RESET: u32 = 0;
+pub const PWM_CH3_CC_B_BITS: u32 = 4294901760;
+pub const PWM_CH3_CC_B_MSB: u32 = 31;
+pub const PWM_CH3_CC_B_LSB: u32 = 16;
+pub const PWM_CH3_CC_B_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH3_CC_A_RESET: u32 = 0;
+pub const PWM_CH3_CC_A_BITS: u32 = 65535;
+pub const PWM_CH3_CC_A_MSB: u32 = 15;
+pub const PWM_CH3_CC_A_LSB: u32 = 0;
+pub const PWM_CH3_CC_A_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH3_TOP_OFFSET: u32 = 76;
+pub const PWM_CH3_TOP_BITS: u32 = 65535;
+pub const PWM_CH3_TOP_RESET: u32 = 65535;
+pub const PWM_CH3_TOP_MSB: u32 = 15;
+pub const PWM_CH3_TOP_LSB: u32 = 0;
+pub const PWM_CH3_TOP_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH4_CSR_OFFSET: u32 = 80;
+pub const PWM_CH4_CSR_BITS: u32 = 255;
+pub const PWM_CH4_CSR_RESET: u32 = 0;
+pub const PWM_CH4_CSR_PH_ADV_RESET: u32 = 0;
+pub const PWM_CH4_CSR_PH_ADV_BITS: u32 = 128;
+pub const PWM_CH4_CSR_PH_ADV_MSB: u32 = 7;
+pub const PWM_CH4_CSR_PH_ADV_LSB: u32 = 7;
+pub const PWM_CH4_CSR_PH_ADV_ACCESS: &'static [u8; 3usize] = b"SC\0";
+pub const PWM_CH4_CSR_PH_RET_RESET: u32 = 0;
+pub const PWM_CH4_CSR_PH_RET_BITS: u32 = 64;
+pub const PWM_CH4_CSR_PH_RET_MSB: u32 = 6;
+pub const PWM_CH4_CSR_PH_RET_LSB: u32 = 6;
+pub const PWM_CH4_CSR_PH_RET_ACCESS: &'static [u8; 3usize] = b"SC\0";
+pub const PWM_CH4_CSR_DIVMODE_RESET: u32 = 0;
+pub const PWM_CH4_CSR_DIVMODE_BITS: u32 = 48;
+pub const PWM_CH4_CSR_DIVMODE_MSB: u32 = 5;
+pub const PWM_CH4_CSR_DIVMODE_LSB: u32 = 4;
+pub const PWM_CH4_CSR_DIVMODE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH4_CSR_DIVMODE_VALUE_DIV: u32 = 0;
+pub const PWM_CH4_CSR_DIVMODE_VALUE_LEVEL: u32 = 1;
+pub const PWM_CH4_CSR_DIVMODE_VALUE_RISE: u32 = 2;
+pub const PWM_CH4_CSR_DIVMODE_VALUE_FALL: u32 = 3;
+pub const PWM_CH4_CSR_B_INV_RESET: u32 = 0;
+pub const PWM_CH4_CSR_B_INV_BITS: u32 = 8;
+pub const PWM_CH4_CSR_B_INV_MSB: u32 = 3;
+pub const PWM_CH4_CSR_B_INV_LSB: u32 = 3;
+pub const PWM_CH4_CSR_B_INV_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH4_CSR_A_INV_RESET: u32 = 0;
+pub const PWM_CH4_CSR_A_INV_BITS: u32 = 4;
+pub const PWM_CH4_CSR_A_INV_MSB: u32 = 2;
+pub const PWM_CH4_CSR_A_INV_LSB: u32 = 2;
+pub const PWM_CH4_CSR_A_INV_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH4_CSR_PH_CORRECT_RESET: u32 = 0;
+pub const PWM_CH4_CSR_PH_CORRECT_BITS: u32 = 2;
+pub const PWM_CH4_CSR_PH_CORRECT_MSB: u32 = 1;
+pub const PWM_CH4_CSR_PH_CORRECT_LSB: u32 = 1;
+pub const PWM_CH4_CSR_PH_CORRECT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH4_CSR_EN_RESET: u32 = 0;
+pub const PWM_CH4_CSR_EN_BITS: u32 = 1;
+pub const PWM_CH4_CSR_EN_MSB: u32 = 0;
+pub const PWM_CH4_CSR_EN_LSB: u32 = 0;
+pub const PWM_CH4_CSR_EN_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH4_DIV_OFFSET: u32 = 84;
+pub const PWM_CH4_DIV_BITS: u32 = 4095;
+pub const PWM_CH4_DIV_RESET: u32 = 16;
+pub const PWM_CH4_DIV_INT_RESET: u32 = 1;
+pub const PWM_CH4_DIV_INT_BITS: u32 = 4080;
+pub const PWM_CH4_DIV_INT_MSB: u32 = 11;
+pub const PWM_CH4_DIV_INT_LSB: u32 = 4;
+pub const PWM_CH4_DIV_INT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH4_DIV_FRAC_RESET: u32 = 0;
+pub const PWM_CH4_DIV_FRAC_BITS: u32 = 15;
+pub const PWM_CH4_DIV_FRAC_MSB: u32 = 3;
+pub const PWM_CH4_DIV_FRAC_LSB: u32 = 0;
+pub const PWM_CH4_DIV_FRAC_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH4_CTR_OFFSET: u32 = 88;
+pub const PWM_CH4_CTR_BITS: u32 = 65535;
+pub const PWM_CH4_CTR_RESET: u32 = 0;
+pub const PWM_CH4_CTR_MSB: u32 = 15;
+pub const PWM_CH4_CTR_LSB: u32 = 0;
+pub const PWM_CH4_CTR_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH4_CC_OFFSET: u32 = 92;
+pub const PWM_CH4_CC_BITS: u32 = 4294967295;
+pub const PWM_CH4_CC_RESET: u32 = 0;
+pub const PWM_CH4_CC_B_RESET: u32 = 0;
+pub const PWM_CH4_CC_B_BITS: u32 = 4294901760;
+pub const PWM_CH4_CC_B_MSB: u32 = 31;
+pub const PWM_CH4_CC_B_LSB: u32 = 16;
+pub const PWM_CH4_CC_B_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH4_CC_A_RESET: u32 = 0;
+pub const PWM_CH4_CC_A_BITS: u32 = 65535;
+pub const PWM_CH4_CC_A_MSB: u32 = 15;
+pub const PWM_CH4_CC_A_LSB: u32 = 0;
+pub const PWM_CH4_CC_A_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH4_TOP_OFFSET: u32 = 96;
+pub const PWM_CH4_TOP_BITS: u32 = 65535;
+pub const PWM_CH4_TOP_RESET: u32 = 65535;
+pub const PWM_CH4_TOP_MSB: u32 = 15;
+pub const PWM_CH4_TOP_LSB: u32 = 0;
+pub const PWM_CH4_TOP_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH5_CSR_OFFSET: u32 = 100;
+pub const PWM_CH5_CSR_BITS: u32 = 255;
+pub const PWM_CH5_CSR_RESET: u32 = 0;
+pub const PWM_CH5_CSR_PH_ADV_RESET: u32 = 0;
+pub const PWM_CH5_CSR_PH_ADV_BITS: u32 = 128;
+pub const PWM_CH5_CSR_PH_ADV_MSB: u32 = 7;
+pub const PWM_CH5_CSR_PH_ADV_LSB: u32 = 7;
+pub const PWM_CH5_CSR_PH_ADV_ACCESS: &'static [u8; 3usize] = b"SC\0";
+pub const PWM_CH5_CSR_PH_RET_RESET: u32 = 0;
+pub const PWM_CH5_CSR_PH_RET_BITS: u32 = 64;
+pub const PWM_CH5_CSR_PH_RET_MSB: u32 = 6;
+pub const PWM_CH5_CSR_PH_RET_LSB: u32 = 6;
+pub const PWM_CH5_CSR_PH_RET_ACCESS: &'static [u8; 3usize] = b"SC\0";
+pub const PWM_CH5_CSR_DIVMODE_RESET: u32 = 0;
+pub const PWM_CH5_CSR_DIVMODE_BITS: u32 = 48;
+pub const PWM_CH5_CSR_DIVMODE_MSB: u32 = 5;
+pub const PWM_CH5_CSR_DIVMODE_LSB: u32 = 4;
+pub const PWM_CH5_CSR_DIVMODE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH5_CSR_DIVMODE_VALUE_DIV: u32 = 0;
+pub const PWM_CH5_CSR_DIVMODE_VALUE_LEVEL: u32 = 1;
+pub const PWM_CH5_CSR_DIVMODE_VALUE_RISE: u32 = 2;
+pub const PWM_CH5_CSR_DIVMODE_VALUE_FALL: u32 = 3;
+pub const PWM_CH5_CSR_B_INV_RESET: u32 = 0;
+pub const PWM_CH5_CSR_B_INV_BITS: u32 = 8;
+pub const PWM_CH5_CSR_B_INV_MSB: u32 = 3;
+pub const PWM_CH5_CSR_B_INV_LSB: u32 = 3;
+pub const PWM_CH5_CSR_B_INV_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH5_CSR_A_INV_RESET: u32 = 0;
+pub const PWM_CH5_CSR_A_INV_BITS: u32 = 4;
+pub const PWM_CH5_CSR_A_INV_MSB: u32 = 2;
+pub const PWM_CH5_CSR_A_INV_LSB: u32 = 2;
+pub const PWM_CH5_CSR_A_INV_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH5_CSR_PH_CORRECT_RESET: u32 = 0;
+pub const PWM_CH5_CSR_PH_CORRECT_BITS: u32 = 2;
+pub const PWM_CH5_CSR_PH_CORRECT_MSB: u32 = 1;
+pub const PWM_CH5_CSR_PH_CORRECT_LSB: u32 = 1;
+pub const PWM_CH5_CSR_PH_CORRECT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH5_CSR_EN_RESET: u32 = 0;
+pub const PWM_CH5_CSR_EN_BITS: u32 = 1;
+pub const PWM_CH5_CSR_EN_MSB: u32 = 0;
+pub const PWM_CH5_CSR_EN_LSB: u32 = 0;
+pub const PWM_CH5_CSR_EN_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH5_DIV_OFFSET: u32 = 104;
+pub const PWM_CH5_DIV_BITS: u32 = 4095;
+pub const PWM_CH5_DIV_RESET: u32 = 16;
+pub const PWM_CH5_DIV_INT_RESET: u32 = 1;
+pub const PWM_CH5_DIV_INT_BITS: u32 = 4080;
+pub const PWM_CH5_DIV_INT_MSB: u32 = 11;
+pub const PWM_CH5_DIV_INT_LSB: u32 = 4;
+pub const PWM_CH5_DIV_INT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH5_DIV_FRAC_RESET: u32 = 0;
+pub const PWM_CH5_DIV_FRAC_BITS: u32 = 15;
+pub const PWM_CH5_DIV_FRAC_MSB: u32 = 3;
+pub const PWM_CH5_DIV_FRAC_LSB: u32 = 0;
+pub const PWM_CH5_DIV_FRAC_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH5_CTR_OFFSET: u32 = 108;
+pub const PWM_CH5_CTR_BITS: u32 = 65535;
+pub const PWM_CH5_CTR_RESET: u32 = 0;
+pub const PWM_CH5_CTR_MSB: u32 = 15;
+pub const PWM_CH5_CTR_LSB: u32 = 0;
+pub const PWM_CH5_CTR_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH5_CC_OFFSET: u32 = 112;
+pub const PWM_CH5_CC_BITS: u32 = 4294967295;
+pub const PWM_CH5_CC_RESET: u32 = 0;
+pub const PWM_CH5_CC_B_RESET: u32 = 0;
+pub const PWM_CH5_CC_B_BITS: u32 = 4294901760;
+pub const PWM_CH5_CC_B_MSB: u32 = 31;
+pub const PWM_CH5_CC_B_LSB: u32 = 16;
+pub const PWM_CH5_CC_B_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH5_CC_A_RESET: u32 = 0;
+pub const PWM_CH5_CC_A_BITS: u32 = 65535;
+pub const PWM_CH5_CC_A_MSB: u32 = 15;
+pub const PWM_CH5_CC_A_LSB: u32 = 0;
+pub const PWM_CH5_CC_A_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH5_TOP_OFFSET: u32 = 116;
+pub const PWM_CH5_TOP_BITS: u32 = 65535;
+pub const PWM_CH5_TOP_RESET: u32 = 65535;
+pub const PWM_CH5_TOP_MSB: u32 = 15;
+pub const PWM_CH5_TOP_LSB: u32 = 0;
+pub const PWM_CH5_TOP_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH6_CSR_OFFSET: u32 = 120;
+pub const PWM_CH6_CSR_BITS: u32 = 255;
+pub const PWM_CH6_CSR_RESET: u32 = 0;
+pub const PWM_CH6_CSR_PH_ADV_RESET: u32 = 0;
+pub const PWM_CH6_CSR_PH_ADV_BITS: u32 = 128;
+pub const PWM_CH6_CSR_PH_ADV_MSB: u32 = 7;
+pub const PWM_CH6_CSR_PH_ADV_LSB: u32 = 7;
+pub const PWM_CH6_CSR_PH_ADV_ACCESS: &'static [u8; 3usize] = b"SC\0";
+pub const PWM_CH6_CSR_PH_RET_RESET: u32 = 0;
+pub const PWM_CH6_CSR_PH_RET_BITS: u32 = 64;
+pub const PWM_CH6_CSR_PH_RET_MSB: u32 = 6;
+pub const PWM_CH6_CSR_PH_RET_LSB: u32 = 6;
+pub const PWM_CH6_CSR_PH_RET_ACCESS: &'static [u8; 3usize] = b"SC\0";
+pub const PWM_CH6_CSR_DIVMODE_RESET: u32 = 0;
+pub const PWM_CH6_CSR_DIVMODE_BITS: u32 = 48;
+pub const PWM_CH6_CSR_DIVMODE_MSB: u32 = 5;
+pub const PWM_CH6_CSR_DIVMODE_LSB: u32 = 4;
+pub const PWM_CH6_CSR_DIVMODE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH6_CSR_DIVMODE_VALUE_DIV: u32 = 0;
+pub const PWM_CH6_CSR_DIVMODE_VALUE_LEVEL: u32 = 1;
+pub const PWM_CH6_CSR_DIVMODE_VALUE_RISE: u32 = 2;
+pub const PWM_CH6_CSR_DIVMODE_VALUE_FALL: u32 = 3;
+pub const PWM_CH6_CSR_B_INV_RESET: u32 = 0;
+pub const PWM_CH6_CSR_B_INV_BITS: u32 = 8;
+pub const PWM_CH6_CSR_B_INV_MSB: u32 = 3;
+pub const PWM_CH6_CSR_B_INV_LSB: u32 = 3;
+pub const PWM_CH6_CSR_B_INV_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH6_CSR_A_INV_RESET: u32 = 0;
+pub const PWM_CH6_CSR_A_INV_BITS: u32 = 4;
+pub const PWM_CH6_CSR_A_INV_MSB: u32 = 2;
+pub const PWM_CH6_CSR_A_INV_LSB: u32 = 2;
+pub const PWM_CH6_CSR_A_INV_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH6_CSR_PH_CORRECT_RESET: u32 = 0;
+pub const PWM_CH6_CSR_PH_CORRECT_BITS: u32 = 2;
+pub const PWM_CH6_CSR_PH_CORRECT_MSB: u32 = 1;
+pub const PWM_CH6_CSR_PH_CORRECT_LSB: u32 = 1;
+pub const PWM_CH6_CSR_PH_CORRECT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH6_CSR_EN_RESET: u32 = 0;
+pub const PWM_CH6_CSR_EN_BITS: u32 = 1;
+pub const PWM_CH6_CSR_EN_MSB: u32 = 0;
+pub const PWM_CH6_CSR_EN_LSB: u32 = 0;
+pub const PWM_CH6_CSR_EN_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH6_DIV_OFFSET: u32 = 124;
+pub const PWM_CH6_DIV_BITS: u32 = 4095;
+pub const PWM_CH6_DIV_RESET: u32 = 16;
+pub const PWM_CH6_DIV_INT_RESET: u32 = 1;
+pub const PWM_CH6_DIV_INT_BITS: u32 = 4080;
+pub const PWM_CH6_DIV_INT_MSB: u32 = 11;
+pub const PWM_CH6_DIV_INT_LSB: u32 = 4;
+pub const PWM_CH6_DIV_INT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH6_DIV_FRAC_RESET: u32 = 0;
+pub const PWM_CH6_DIV_FRAC_BITS: u32 = 15;
+pub const PWM_CH6_DIV_FRAC_MSB: u32 = 3;
+pub const PWM_CH6_DIV_FRAC_LSB: u32 = 0;
+pub const PWM_CH6_DIV_FRAC_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH6_CTR_OFFSET: u32 = 128;
+pub const PWM_CH6_CTR_BITS: u32 = 65535;
+pub const PWM_CH6_CTR_RESET: u32 = 0;
+pub const PWM_CH6_CTR_MSB: u32 = 15;
+pub const PWM_CH6_CTR_LSB: u32 = 0;
+pub const PWM_CH6_CTR_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH6_CC_OFFSET: u32 = 132;
+pub const PWM_CH6_CC_BITS: u32 = 4294967295;
+pub const PWM_CH6_CC_RESET: u32 = 0;
+pub const PWM_CH6_CC_B_RESET: u32 = 0;
+pub const PWM_CH6_CC_B_BITS: u32 = 4294901760;
+pub const PWM_CH6_CC_B_MSB: u32 = 31;
+pub const PWM_CH6_CC_B_LSB: u32 = 16;
+pub const PWM_CH6_CC_B_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH6_CC_A_RESET: u32 = 0;
+pub const PWM_CH6_CC_A_BITS: u32 = 65535;
+pub const PWM_CH6_CC_A_MSB: u32 = 15;
+pub const PWM_CH6_CC_A_LSB: u32 = 0;
+pub const PWM_CH6_CC_A_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH6_TOP_OFFSET: u32 = 136;
+pub const PWM_CH6_TOP_BITS: u32 = 65535;
+pub const PWM_CH6_TOP_RESET: u32 = 65535;
+pub const PWM_CH6_TOP_MSB: u32 = 15;
+pub const PWM_CH6_TOP_LSB: u32 = 0;
+pub const PWM_CH6_TOP_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH7_CSR_OFFSET: u32 = 140;
+pub const PWM_CH7_CSR_BITS: u32 = 255;
+pub const PWM_CH7_CSR_RESET: u32 = 0;
+pub const PWM_CH7_CSR_PH_ADV_RESET: u32 = 0;
+pub const PWM_CH7_CSR_PH_ADV_BITS: u32 = 128;
+pub const PWM_CH7_CSR_PH_ADV_MSB: u32 = 7;
+pub const PWM_CH7_CSR_PH_ADV_LSB: u32 = 7;
+pub const PWM_CH7_CSR_PH_ADV_ACCESS: &'static [u8; 3usize] = b"SC\0";
+pub const PWM_CH7_CSR_PH_RET_RESET: u32 = 0;
+pub const PWM_CH7_CSR_PH_RET_BITS: u32 = 64;
+pub const PWM_CH7_CSR_PH_RET_MSB: u32 = 6;
+pub const PWM_CH7_CSR_PH_RET_LSB: u32 = 6;
+pub const PWM_CH7_CSR_PH_RET_ACCESS: &'static [u8; 3usize] = b"SC\0";
+pub const PWM_CH7_CSR_DIVMODE_RESET: u32 = 0;
+pub const PWM_CH7_CSR_DIVMODE_BITS: u32 = 48;
+pub const PWM_CH7_CSR_DIVMODE_MSB: u32 = 5;
+pub const PWM_CH7_CSR_DIVMODE_LSB: u32 = 4;
+pub const PWM_CH7_CSR_DIVMODE_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH7_CSR_DIVMODE_VALUE_DIV: u32 = 0;
+pub const PWM_CH7_CSR_DIVMODE_VALUE_LEVEL: u32 = 1;
+pub const PWM_CH7_CSR_DIVMODE_VALUE_RISE: u32 = 2;
+pub const PWM_CH7_CSR_DIVMODE_VALUE_FALL: u32 = 3;
+pub const PWM_CH7_CSR_B_INV_RESET: u32 = 0;
+pub const PWM_CH7_CSR_B_INV_BITS: u32 = 8;
+pub const PWM_CH7_CSR_B_INV_MSB: u32 = 3;
+pub const PWM_CH7_CSR_B_INV_LSB: u32 = 3;
+pub const PWM_CH7_CSR_B_INV_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH7_CSR_A_INV_RESET: u32 = 0;
+pub const PWM_CH7_CSR_A_INV_BITS: u32 = 4;
+pub const PWM_CH7_CSR_A_INV_MSB: u32 = 2;
+pub const PWM_CH7_CSR_A_INV_LSB: u32 = 2;
+pub const PWM_CH7_CSR_A_INV_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH7_CSR_PH_CORRECT_RESET: u32 = 0;
+pub const PWM_CH7_CSR_PH_CORRECT_BITS: u32 = 2;
+pub const PWM_CH7_CSR_PH_CORRECT_MSB: u32 = 1;
+pub const PWM_CH7_CSR_PH_CORRECT_LSB: u32 = 1;
+pub const PWM_CH7_CSR_PH_CORRECT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH7_CSR_EN_RESET: u32 = 0;
+pub const PWM_CH7_CSR_EN_BITS: u32 = 1;
+pub const PWM_CH7_CSR_EN_MSB: u32 = 0;
+pub const PWM_CH7_CSR_EN_LSB: u32 = 0;
+pub const PWM_CH7_CSR_EN_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH7_DIV_OFFSET: u32 = 144;
+pub const PWM_CH7_DIV_BITS: u32 = 4095;
+pub const PWM_CH7_DIV_RESET: u32 = 16;
+pub const PWM_CH7_DIV_INT_RESET: u32 = 1;
+pub const PWM_CH7_DIV_INT_BITS: u32 = 4080;
+pub const PWM_CH7_DIV_INT_MSB: u32 = 11;
+pub const PWM_CH7_DIV_INT_LSB: u32 = 4;
+pub const PWM_CH7_DIV_INT_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH7_DIV_FRAC_RESET: u32 = 0;
+pub const PWM_CH7_DIV_FRAC_BITS: u32 = 15;
+pub const PWM_CH7_DIV_FRAC_MSB: u32 = 3;
+pub const PWM_CH7_DIV_FRAC_LSB: u32 = 0;
+pub const PWM_CH7_DIV_FRAC_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH7_CTR_OFFSET: u32 = 148;
+pub const PWM_CH7_CTR_BITS: u32 = 65535;
+pub const PWM_CH7_CTR_RESET: u32 = 0;
+pub const PWM_CH7_CTR_MSB: u32 = 15;
+pub const PWM_CH7_CTR_LSB: u32 = 0;
+pub const PWM_CH7_CTR_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH7_CC_OFFSET: u32 = 152;
+pub const PWM_CH7_CC_BITS: u32 = 4294967295;
+pub const PWM_CH7_CC_RESET: u32 = 0;
+pub const PWM_CH7_CC_B_RESET: u32 = 0;
+pub const PWM_CH7_CC_B_BITS: u32 = 4294901760;
+pub const PWM_CH7_CC_B_MSB: u32 = 31;
+pub const PWM_CH7_CC_B_LSB: u32 = 16;
+pub const PWM_CH7_CC_B_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH7_CC_A_RESET: u32 = 0;
+pub const PWM_CH7_CC_A_BITS: u32 = 65535;
+pub const PWM_CH7_CC_A_MSB: u32 = 15;
+pub const PWM_CH7_CC_A_LSB: u32 = 0;
+pub const PWM_CH7_CC_A_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_CH7_TOP_OFFSET: u32 = 156;
+pub const PWM_CH7_TOP_BITS: u32 = 65535;
+pub const PWM_CH7_TOP_RESET: u32 = 65535;
+pub const PWM_CH7_TOP_MSB: u32 = 15;
+pub const PWM_CH7_TOP_LSB: u32 = 0;
+pub const PWM_CH7_TOP_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_EN_OFFSET: u32 = 160;
+pub const PWM_EN_BITS: u32 = 255;
+pub const PWM_EN_RESET: u32 = 0;
+pub const PWM_EN_CH7_RESET: u32 = 0;
+pub const PWM_EN_CH7_BITS: u32 = 128;
+pub const PWM_EN_CH7_MSB: u32 = 7;
+pub const PWM_EN_CH7_LSB: u32 = 7;
+pub const PWM_EN_CH7_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_EN_CH6_RESET: u32 = 0;
+pub const PWM_EN_CH6_BITS: u32 = 64;
+pub const PWM_EN_CH6_MSB: u32 = 6;
+pub const PWM_EN_CH6_LSB: u32 = 6;
+pub const PWM_EN_CH6_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_EN_CH5_RESET: u32 = 0;
+pub const PWM_EN_CH5_BITS: u32 = 32;
+pub const PWM_EN_CH5_MSB: u32 = 5;
+pub const PWM_EN_CH5_LSB: u32 = 5;
+pub const PWM_EN_CH5_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_EN_CH4_RESET: u32 = 0;
+pub const PWM_EN_CH4_BITS: u32 = 16;
+pub const PWM_EN_CH4_MSB: u32 = 4;
+pub const PWM_EN_CH4_LSB: u32 = 4;
+pub const PWM_EN_CH4_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_EN_CH3_RESET: u32 = 0;
+pub const PWM_EN_CH3_BITS: u32 = 8;
+pub const PWM_EN_CH3_MSB: u32 = 3;
+pub const PWM_EN_CH3_LSB: u32 = 3;
+pub const PWM_EN_CH3_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_EN_CH2_RESET: u32 = 0;
+pub const PWM_EN_CH2_BITS: u32 = 4;
+pub const PWM_EN_CH2_MSB: u32 = 2;
+pub const PWM_EN_CH2_LSB: u32 = 2;
+pub const PWM_EN_CH2_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_EN_CH1_RESET: u32 = 0;
+pub const PWM_EN_CH1_BITS: u32 = 2;
+pub const PWM_EN_CH1_MSB: u32 = 1;
+pub const PWM_EN_CH1_LSB: u32 = 1;
+pub const PWM_EN_CH1_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_EN_CH0_RESET: u32 = 0;
+pub const PWM_EN_CH0_BITS: u32 = 1;
+pub const PWM_EN_CH0_MSB: u32 = 0;
+pub const PWM_EN_CH0_LSB: u32 = 0;
+pub const PWM_EN_CH0_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTR_OFFSET: u32 = 164;
+pub const PWM_INTR_BITS: u32 = 255;
+pub const PWM_INTR_RESET: u32 = 0;
+pub const PWM_INTR_CH7_RESET: u32 = 0;
+pub const PWM_INTR_CH7_BITS: u32 = 128;
+pub const PWM_INTR_CH7_MSB: u32 = 7;
+pub const PWM_INTR_CH7_LSB: u32 = 7;
+pub const PWM_INTR_CH7_ACCESS: &'static [u8; 3usize] = b"WC\0";
+pub const PWM_INTR_CH6_RESET: u32 = 0;
+pub const PWM_INTR_CH6_BITS: u32 = 64;
+pub const PWM_INTR_CH6_MSB: u32 = 6;
+pub const PWM_INTR_CH6_LSB: u32 = 6;
+pub const PWM_INTR_CH6_ACCESS: &'static [u8; 3usize] = b"WC\0";
+pub const PWM_INTR_CH5_RESET: u32 = 0;
+pub const PWM_INTR_CH5_BITS: u32 = 32;
+pub const PWM_INTR_CH5_MSB: u32 = 5;
+pub const PWM_INTR_CH5_LSB: u32 = 5;
+pub const PWM_INTR_CH5_ACCESS: &'static [u8; 3usize] = b"WC\0";
+pub const PWM_INTR_CH4_RESET: u32 = 0;
+pub const PWM_INTR_CH4_BITS: u32 = 16;
+pub const PWM_INTR_CH4_MSB: u32 = 4;
+pub const PWM_INTR_CH4_LSB: u32 = 4;
+pub const PWM_INTR_CH4_ACCESS: &'static [u8; 3usize] = b"WC\0";
+pub const PWM_INTR_CH3_RESET: u32 = 0;
+pub const PWM_INTR_CH3_BITS: u32 = 8;
+pub const PWM_INTR_CH3_MSB: u32 = 3;
+pub const PWM_INTR_CH3_LSB: u32 = 3;
+pub const PWM_INTR_CH3_ACCESS: &'static [u8; 3usize] = b"WC\0";
+pub const PWM_INTR_CH2_RESET: u32 = 0;
+pub const PWM_INTR_CH2_BITS: u32 = 4;
+pub const PWM_INTR_CH2_MSB: u32 = 2;
+pub const PWM_INTR_CH2_LSB: u32 = 2;
+pub const PWM_INTR_CH2_ACCESS: &'static [u8; 3usize] = b"WC\0";
+pub const PWM_INTR_CH1_RESET: u32 = 0;
+pub const PWM_INTR_CH1_BITS: u32 = 2;
+pub const PWM_INTR_CH1_MSB: u32 = 1;
+pub const PWM_INTR_CH1_LSB: u32 = 1;
+pub const PWM_INTR_CH1_ACCESS: &'static [u8; 3usize] = b"WC\0";
+pub const PWM_INTR_CH0_RESET: u32 = 0;
+pub const PWM_INTR_CH0_BITS: u32 = 1;
+pub const PWM_INTR_CH0_MSB: u32 = 0;
+pub const PWM_INTR_CH0_LSB: u32 = 0;
+pub const PWM_INTR_CH0_ACCESS: &'static [u8; 3usize] = b"WC\0";
+pub const PWM_INTE_OFFSET: u32 = 168;
+pub const PWM_INTE_BITS: u32 = 255;
+pub const PWM_INTE_RESET: u32 = 0;
+pub const PWM_INTE_CH7_RESET: u32 = 0;
+pub const PWM_INTE_CH7_BITS: u32 = 128;
+pub const PWM_INTE_CH7_MSB: u32 = 7;
+pub const PWM_INTE_CH7_LSB: u32 = 7;
+pub const PWM_INTE_CH7_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTE_CH6_RESET: u32 = 0;
+pub const PWM_INTE_CH6_BITS: u32 = 64;
+pub const PWM_INTE_CH6_MSB: u32 = 6;
+pub const PWM_INTE_CH6_LSB: u32 = 6;
+pub const PWM_INTE_CH6_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTE_CH5_RESET: u32 = 0;
+pub const PWM_INTE_CH5_BITS: u32 = 32;
+pub const PWM_INTE_CH5_MSB: u32 = 5;
+pub const PWM_INTE_CH5_LSB: u32 = 5;
+pub const PWM_INTE_CH5_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTE_CH4_RESET: u32 = 0;
+pub const PWM_INTE_CH4_BITS: u32 = 16;
+pub const PWM_INTE_CH4_MSB: u32 = 4;
+pub const PWM_INTE_CH4_LSB: u32 = 4;
+pub const PWM_INTE_CH4_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTE_CH3_RESET: u32 = 0;
+pub const PWM_INTE_CH3_BITS: u32 = 8;
+pub const PWM_INTE_CH3_MSB: u32 = 3;
+pub const PWM_INTE_CH3_LSB: u32 = 3;
+pub const PWM_INTE_CH3_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTE_CH2_RESET: u32 = 0;
+pub const PWM_INTE_CH2_BITS: u32 = 4;
+pub const PWM_INTE_CH2_MSB: u32 = 2;
+pub const PWM_INTE_CH2_LSB: u32 = 2;
+pub const PWM_INTE_CH2_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTE_CH1_RESET: u32 = 0;
+pub const PWM_INTE_CH1_BITS: u32 = 2;
+pub const PWM_INTE_CH1_MSB: u32 = 1;
+pub const PWM_INTE_CH1_LSB: u32 = 1;
+pub const PWM_INTE_CH1_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTE_CH0_RESET: u32 = 0;
+pub const PWM_INTE_CH0_BITS: u32 = 1;
+pub const PWM_INTE_CH0_MSB: u32 = 0;
+pub const PWM_INTE_CH0_LSB: u32 = 0;
+pub const PWM_INTE_CH0_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTF_OFFSET: u32 = 172;
+pub const PWM_INTF_BITS: u32 = 255;
+pub const PWM_INTF_RESET: u32 = 0;
+pub const PWM_INTF_CH7_RESET: u32 = 0;
+pub const PWM_INTF_CH7_BITS: u32 = 128;
+pub const PWM_INTF_CH7_MSB: u32 = 7;
+pub const PWM_INTF_CH7_LSB: u32 = 7;
+pub const PWM_INTF_CH7_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTF_CH6_RESET: u32 = 0;
+pub const PWM_INTF_CH6_BITS: u32 = 64;
+pub const PWM_INTF_CH6_MSB: u32 = 6;
+pub const PWM_INTF_CH6_LSB: u32 = 6;
+pub const PWM_INTF_CH6_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTF_CH5_RESET: u32 = 0;
+pub const PWM_INTF_CH5_BITS: u32 = 32;
+pub const PWM_INTF_CH5_MSB: u32 = 5;
+pub const PWM_INTF_CH5_LSB: u32 = 5;
+pub const PWM_INTF_CH5_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTF_CH4_RESET: u32 = 0;
+pub const PWM_INTF_CH4_BITS: u32 = 16;
+pub const PWM_INTF_CH4_MSB: u32 = 4;
+pub const PWM_INTF_CH4_LSB: u32 = 4;
+pub const PWM_INTF_CH4_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTF_CH3_RESET: u32 = 0;
+pub const PWM_INTF_CH3_BITS: u32 = 8;
+pub const PWM_INTF_CH3_MSB: u32 = 3;
+pub const PWM_INTF_CH3_LSB: u32 = 3;
+pub const PWM_INTF_CH3_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTF_CH2_RESET: u32 = 0;
+pub const PWM_INTF_CH2_BITS: u32 = 4;
+pub const PWM_INTF_CH2_MSB: u32 = 2;
+pub const PWM_INTF_CH2_LSB: u32 = 2;
+pub const PWM_INTF_CH2_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTF_CH1_RESET: u32 = 0;
+pub const PWM_INTF_CH1_BITS: u32 = 2;
+pub const PWM_INTF_CH1_MSB: u32 = 1;
+pub const PWM_INTF_CH1_LSB: u32 = 1;
+pub const PWM_INTF_CH1_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTF_CH0_RESET: u32 = 0;
+pub const PWM_INTF_CH0_BITS: u32 = 1;
+pub const PWM_INTF_CH0_MSB: u32 = 0;
+pub const PWM_INTF_CH0_LSB: u32 = 0;
+pub const PWM_INTF_CH0_ACCESS: &'static [u8; 3usize] = b"RW\0";
+pub const PWM_INTS_OFFSET: u32 = 176;
+pub const PWM_INTS_BITS: u32 = 255;
+pub const PWM_INTS_RESET: u32 = 0;
+pub const PWM_INTS_CH7_RESET: u32 = 0;
+pub const PWM_INTS_CH7_BITS: u32 = 128;
+pub const PWM_INTS_CH7_MSB: u32 = 7;
+pub const PWM_INTS_CH7_LSB: u32 = 7;
+pub const PWM_INTS_CH7_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const PWM_INTS_CH6_RESET: u32 = 0;
+pub const PWM_INTS_CH6_BITS: u32 = 64;
+pub const PWM_INTS_CH6_MSB: u32 = 6;
+pub const PWM_INTS_CH6_LSB: u32 = 6;
+pub const PWM_INTS_CH6_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const PWM_INTS_CH5_RESET: u32 = 0;
+pub const PWM_INTS_CH5_BITS: u32 = 32;
+pub const PWM_INTS_CH5_MSB: u32 = 5;
+pub const PWM_INTS_CH5_LSB: u32 = 5;
+pub const PWM_INTS_CH5_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const PWM_INTS_CH4_RESET: u32 = 0;
+pub const PWM_INTS_CH4_BITS: u32 = 16;
+pub const PWM_INTS_CH4_MSB: u32 = 4;
+pub const PWM_INTS_CH4_LSB: u32 = 4;
+pub const PWM_INTS_CH4_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const PWM_INTS_CH3_RESET: u32 = 0;
+pub const PWM_INTS_CH3_BITS: u32 = 8;
+pub const PWM_INTS_CH3_MSB: u32 = 3;
+pub const PWM_INTS_CH3_LSB: u32 = 3;
+pub const PWM_INTS_CH3_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const PWM_INTS_CH2_RESET: u32 = 0;
+pub const PWM_INTS_CH2_BITS: u32 = 4;
+pub const PWM_INTS_CH2_MSB: u32 = 2;
+pub const PWM_INTS_CH2_LSB: u32 = 2;
+pub const PWM_INTS_CH2_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const PWM_INTS_CH1_RESET: u32 = 0;
+pub const PWM_INTS_CH1_BITS: u32 = 2;
+pub const PWM_INTS_CH1_MSB: u32 = 1;
+pub const PWM_INTS_CH1_LSB: u32 = 1;
+pub const PWM_INTS_CH1_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const PWM_INTS_CH0_RESET: u32 = 0;
+pub const PWM_INTS_CH0_BITS: u32 = 1;
+pub const PWM_INTS_CH0_MSB: u32 = 0;
+pub const PWM_INTS_CH0_LSB: u32 = 0;
+pub const PWM_INTS_CH0_ACCESS: &'static [u8; 3usize] = b"RO\0";
+pub const PARAM_ASSERTIONS_ENABLED_PWM: u32 = 0;
 pub type int_least8_t = i8;
 pub type int_least16_t = i16;
 pub type int_least32_t = i32;
@@ -4980,17 +6394,17 @@ fn bindgen_test_layout_padsbank0_hw_t() {
         )
     );
 }
-pub const gpio_function_GPIO_FUNC_XIP: gpio_function = 0;
-pub const gpio_function_GPIO_FUNC_SPI: gpio_function = 1;
-pub const gpio_function_GPIO_FUNC_UART: gpio_function = 2;
-pub const gpio_function_GPIO_FUNC_I2C: gpio_function = 3;
-pub const gpio_function_GPIO_FUNC_PWM: gpio_function = 4;
-pub const gpio_function_GPIO_FUNC_SIO: gpio_function = 5;
-pub const gpio_function_GPIO_FUNC_PIO0: gpio_function = 6;
-pub const gpio_function_GPIO_FUNC_PIO1: gpio_function = 7;
-pub const gpio_function_GPIO_FUNC_GPCK: gpio_function = 8;
-pub const gpio_function_GPIO_FUNC_USB: gpio_function = 9;
-pub const gpio_function_GPIO_FUNC_NULL: gpio_function = 15;
+pub const GPIO_FUNC_XIP: gpio_function = 0;
+pub const GPIO_FUNC_SPI: gpio_function = 1;
+pub const GPIO_FUNC_UART: gpio_function = 2;
+pub const GPIO_FUNC_I2C: gpio_function = 3;
+pub const GPIO_FUNC_PWM: gpio_function = 4;
+pub const GPIO_FUNC_SIO: gpio_function = 5;
+pub const GPIO_FUNC_PIO0: gpio_function = 6;
+pub const GPIO_FUNC_PIO1: gpio_function = 7;
+pub const GPIO_FUNC_GPCK: gpio_function = 8;
+pub const GPIO_FUNC_USB: gpio_function = 9;
+pub const GPIO_FUNC_NULL: gpio_function = 15;
 #[doc = " \\brief  GPIO function definitions for use with function select"]
 #[doc = "  \\ingroup hardware_gpio"]
 #[doc = " \\brief GPIO function selectors"]
@@ -5001,10 +6415,10 @@ pub const gpio_function_GPIO_FUNC_NULL: gpio_function = 15;
 #[doc = ""]
 #[doc = " Please refer to the datsheet for more information on GPIO function selection."]
 pub type gpio_function = crate::ctypes::c_uint;
-pub const gpio_irq_level_GPIO_IRQ_LEVEL_LOW: gpio_irq_level = 1;
-pub const gpio_irq_level_GPIO_IRQ_LEVEL_HIGH: gpio_irq_level = 2;
-pub const gpio_irq_level_GPIO_IRQ_EDGE_FALL: gpio_irq_level = 4;
-pub const gpio_irq_level_GPIO_IRQ_EDGE_RISE: gpio_irq_level = 8;
+pub const GPIO_IRQ_LEVEL_LOW: gpio_irq_level = 1;
+pub const GPIO_IRQ_LEVEL_HIGH: gpio_irq_level = 2;
+pub const GPIO_IRQ_EDGE_FALL: gpio_irq_level = 4;
+pub const GPIO_IRQ_EDGE_RISE: gpio_irq_level = 8;
 #[doc = " \\brief  GPIO Interrupt level definitions"]
 #[doc = "  \\ingroup hardware_gpio"]
 #[doc = "  \\brief GPIO Interrupt levels"]
@@ -5023,13 +6437,13 @@ pub type gpio_irq_level = crate::ctypes::c_uint;
 pub type gpio_irq_callback_t =
     ::core::option::Option<unsafe extern "C" fn(gpio: uint, events: u32)>;
 #[doc = "< peripheral signal selected via \\ref gpio_set_function"]
-pub const gpio_override_GPIO_OVERRIDE_NORMAL: gpio_override = 0;
+pub const GPIO_OVERRIDE_NORMAL: gpio_override = 0;
 #[doc = "< invert peripheral signal selected via \\ref gpio_set_function"]
-pub const gpio_override_GPIO_OVERRIDE_INVERT: gpio_override = 1;
+pub const GPIO_OVERRIDE_INVERT: gpio_override = 1;
 #[doc = "< drive low/disable output"]
-pub const gpio_override_GPIO_OVERRIDE_LOW: gpio_override = 2;
+pub const GPIO_OVERRIDE_LOW: gpio_override = 2;
 #[doc = "< drive high/enable output"]
-pub const gpio_override_GPIO_OVERRIDE_HIGH: gpio_override = 3;
+pub const GPIO_OVERRIDE_HIGH: gpio_override = 3;
 pub type gpio_override = crate::ctypes::c_uint;
 extern "C" {
     #[doc = " \\brief Select GPIO function"]
@@ -5398,9 +6812,9 @@ pub struct uart_inst {
 #[doc = " }"]
 #[doc = " \\endcode"]
 pub type uart_inst_t = uart_inst;
-pub const uart_parity_t_UART_PARITY_NONE: uart_parity_t = 0;
-pub const uart_parity_t_UART_PARITY_EVEN: uart_parity_t = 1;
-pub const uart_parity_t_UART_PARITY_ODD: uart_parity_t = 2;
+pub const UART_PARITY_NONE: uart_parity_t = 0;
+pub const UART_PARITY_EVEN: uart_parity_t = 1;
+pub const UART_PARITY_ODD: uart_parity_t = 2;
 #[doc = " \\brief UART Parity enumeration"]
 #[doc = "  \\ingroup hardware_uart"]
 pub type uart_parity_t = crate::ctypes::c_uint;
@@ -5506,6 +6920,361 @@ extern "C" {
         post_div1_out: *mut uint,
         post_div2_out: *mut uint,
     ) -> bool;
+}
+#[doc = " \\brief Interrupt handler function type"]
+#[doc = "  \\ingroup hardware_irq"]
+#[doc = ""]
+#[doc = " All interrupts handlers should be of this type, and follow normal ARM EABI register saving conventions"]
+pub type irq_handler_t = ::core::option::Option<unsafe extern "C" fn()>;
+extern "C" {
+    #[doc = " \\brief Set specified interrupts priority"]
+    #[doc = "  \\ingroup hardware_irq"]
+    #[doc = ""]
+    #[doc = " \\param num Interrupt number"]
+    #[doc = " \\param hardware_priority Priority to set. Hardware priorities range from 0 (lowest) to 255 (highest) though only"]
+    #[doc = " the top 2 bits are significant on ARM Cortex M0+. To make it easier to specify higher or lower priorities"]
+    #[doc = " than the default, all IRQ priorities are initialized to PICO_DEFAULT_IRQ_PRIORITY by the SDK runtime at startup."]
+    #[doc = " PICO_DEFAULT_IRQ_PRIORITY defaults to 0x80"]
+    pub fn irq_set_priority(num: uint, hardware_priority: u8);
+}
+extern "C" {
+    #[doc = " \\brief Enable or disable a specific interrupt on the executing core"]
+    #[doc = "  \\ingroup hardware_irq"]
+    #[doc = ""]
+    #[doc = " \\param num Interrupt number \\ref interrupt_nums"]
+    #[doc = " \\param enabled true to enable the interrupt, false to disable"]
+    pub fn irq_set_enabled(num: uint, enabled: bool);
+}
+extern "C" {
+    #[doc = " \\brief Determine if a specific interrupt is enabled on the executing core"]
+    #[doc = "  \\ingroup hardware_irq"]
+    #[doc = ""]
+    #[doc = " \\param num Interrupt number \\ref interrupt_nums"]
+    #[doc = " \\return true if the interrupt is enabled"]
+    pub fn irq_is_enabled(num: uint) -> bool;
+}
+extern "C" {
+    #[doc = " \\brief Enable/disable multiple interrupts on the executing core"]
+    #[doc = "  \\ingroup hardware_irq"]
+    #[doc = ""]
+    #[doc = " \\param mask 32-bit mask with one bits set for the interrupts to enable/disable"]
+    #[doc = " \\param enabled true to enable the interrupts, false to disable them."]
+    pub fn irq_set_mask_enabled(mask: u32, enabled: bool);
+}
+extern "C" {
+    #[doc = " \\brief  Set an exclusive interrupt handler for an interrupt on the executing core."]
+    #[doc = "  \\ingroup hardware_irq"]
+    #[doc = ""]
+    #[doc = " Use this method to set a handler for single IRQ source interrupts, or when"]
+    #[doc = " your code, use case or performance requirements dictate that there should"]
+    #[doc = " no other handlers for the interrupt."]
+    #[doc = ""]
+    #[doc = " This method will assert if there is already any sort of interrupt handler installed"]
+    #[doc = " for the specified irq number."]
+    #[doc = ""]
+    #[doc = " \\param num Interrupt number \\ref interrupt_nums"]
+    #[doc = " \\param handler The handler to set. See \\ref irq_handler_t"]
+    #[doc = " \\see irq_add_shared_handler"]
+    pub fn irq_set_exclusive_handler(num: uint, handler: irq_handler_t);
+}
+extern "C" {
+    #[doc = " \\brief  Get the exclusive interrupt handler for an interrupt on the executing core."]
+    #[doc = "  \\ingroup hardware_irq"]
+    #[doc = ""]
+    #[doc = " This method will return an exclusive IRQ handler set on this core"]
+    #[doc = " by irq_set_exclusive_handler if there is one."]
+    #[doc = ""]
+    #[doc = " \\param num Interrupt number \\ref interrupt_nums"]
+    #[doc = " \\see irq_set_exclusive_handler"]
+    #[doc = " \\return handler The handler if an exclusive handler is set for the IRQ,"]
+    #[doc = "                 NULL if no handler is set or shared/shareable handlers are installed"]
+    pub fn irq_get_exclusive_handler(num: uint) -> irq_handler_t;
+}
+extern "C" {
+    #[doc = " \\brief Add a shared interrupt handler for an interrupt on the executing core"]
+    #[doc = "  \\ingroup hardware_irq"]
+    #[doc = ""]
+    #[doc = " Use this method to add a handler on an irq number shared between multiple distinct hardware sources (e.g. GPIO, DMA or PIO IRQs)."]
+    #[doc = " Handlers added by this method will all be called in sequence from highest order_priority to lowest. The"]
+    #[doc = " irq_set_exclusive_handler() method should be used instead if you know there will or should only ever be one handler for the interrupt."]
+    #[doc = ""]
+    #[doc = " This method will assert if there is an exclusive interrupt handler set for this irq number on this core, or if"]
+    #[doc = " the (total across all IRQs on both cores) maximum (configurable via PICO_MAX_SHARED_IRQ_HANDLERS) number of shared handlers"]
+    #[doc = " would be exceeded."]
+    #[doc = ""]
+    #[doc = " \\param num Interrupt number"]
+    #[doc = " \\param handler The handler to set. See \\ref irq_handler_t"]
+    #[doc = " \\param order_priority The order priority controls the order that handlers for the same IRQ number on the core are called."]
+    #[doc = " The shared irq handlers for an interrupt are all called when an IRQ fires, however the order of the calls is based"]
+    #[doc = " on the order_priority (higher priorities are called first, identical priorities are called in undefined order). A good"]
+    #[doc = " rule of thumb is to use PICO_SHARED_IRQ_HANDLER_DEFAULT_ORDER_PRIORITY if you don't much care, as it is in the middle of"]
+    #[doc = " the priority range by default."]
+    #[doc = ""]
+    #[doc = " \\see irq_set_exclusive_handler"]
+    pub fn irq_add_shared_handler(num: uint, handler: irq_handler_t, order_priority: u8);
+}
+extern "C" {
+    #[doc = " \\brief Remove a specific interrupt handler for the given irq number on the executing core"]
+    #[doc = "  \\ingroup hardware_irq"]
+    #[doc = ""]
+    #[doc = " This method may be used to remove an irq set via either irq_set_exclusive_handler() or"]
+    #[doc = " irq_add_shared_handler(), and will assert if the handler is not currently installed for the given"]
+    #[doc = " IRQ number"]
+    #[doc = ""]
+    #[doc = " \\note This method may *only* be called from user (non IRQ code) or from within the handler"]
+    #[doc = " itself (i.e. an IRQ handler may remove itself as part of handling the IRQ). Attempts to call"]
+    #[doc = " from another IRQ will cause an assertion."]
+    #[doc = ""]
+    #[doc = " \\param num Interrupt number \\ref interrupt_nums"]
+    #[doc = " \\param handler The handler to removed."]
+    #[doc = " \\see irq_set_exclusive_handler"]
+    #[doc = " \\see irq_add_shared_handler"]
+    pub fn irq_remove_handler(num: uint, handler: irq_handler_t);
+}
+extern "C" {
+    #[doc = " \\brief Get the current IRQ handler for the specified IRQ from the currently installed hardware vector table (VTOR)"]
+    #[doc = " of the execution core"]
+    #[doc = "  \\ingroup hardware_irq"]
+    #[doc = ""]
+    #[doc = " \\param num Interrupt number \\ref interrupt_nums"]
+    #[doc = " \\return the address stored in the VTABLE for the given irq number"]
+    pub fn irq_get_vtable_handler(num: uint) -> irq_handler_t;
+}
+extern "C" {
+    #[doc = " \\brief Force an interrupt to pending on the executing core"]
+    #[doc = "  \\ingroup hardware_irq"]
+    #[doc = ""]
+    #[doc = " This should generally not be used for IRQs connected to hardware."]
+    #[doc = ""]
+    #[doc = " \\param num Interrupt number \\ref interrupt_nums"]
+    pub fn irq_set_pending(num: uint);
+}
+extern "C" {
+    #[doc = " \\brief Perform IRQ priority intiialization for the current core"]
+    #[doc = ""]
+    #[doc = " \\note This is an internal method and user should generally not call it."]
+    pub fn irq_init_priorities();
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct pwm_slice_hw {
+    pub csr: io_rw_32,
+    pub div: io_rw_32,
+    pub ctr: io_rw_32,
+    pub cc: io_rw_32,
+    pub top: io_rw_32,
+}
+#[test]
+fn bindgen_test_layout_pwm_slice_hw() {
+    assert_eq!(
+        ::core::mem::size_of::<pwm_slice_hw>(),
+        20usize,
+        concat!("Size of: ", stringify!(pwm_slice_hw))
+    );
+    assert_eq!(
+        ::core::mem::align_of::<pwm_slice_hw>(),
+        4usize,
+        concat!("Alignment of ", stringify!(pwm_slice_hw))
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<pwm_slice_hw>())).csr as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pwm_slice_hw),
+            "::",
+            stringify!(csr)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<pwm_slice_hw>())).div as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pwm_slice_hw),
+            "::",
+            stringify!(div)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<pwm_slice_hw>())).ctr as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pwm_slice_hw),
+            "::",
+            stringify!(ctr)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<pwm_slice_hw>())).cc as *const _ as usize },
+        12usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pwm_slice_hw),
+            "::",
+            stringify!(cc)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<pwm_slice_hw>())).top as *const _ as usize },
+        16usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pwm_slice_hw),
+            "::",
+            stringify!(top)
+        )
+    );
+}
+pub type pwm_slice_hw_t = pwm_slice_hw;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct pwm_hw_t {
+    pub slice: [pwm_slice_hw_t; 8usize],
+    pub en: io_rw_32,
+    pub intr: io_rw_32,
+    pub inte: io_rw_32,
+    pub intf: io_rw_32,
+    pub ints: io_rw_32,
+}
+#[test]
+fn bindgen_test_layout_pwm_hw_t() {
+    assert_eq!(
+        ::core::mem::size_of::<pwm_hw_t>(),
+        180usize,
+        concat!("Size of: ", stringify!(pwm_hw_t))
+    );
+    assert_eq!(
+        ::core::mem::align_of::<pwm_hw_t>(),
+        4usize,
+        concat!("Alignment of ", stringify!(pwm_hw_t))
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<pwm_hw_t>())).slice as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pwm_hw_t),
+            "::",
+            stringify!(slice)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<pwm_hw_t>())).en as *const _ as usize },
+        160usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pwm_hw_t),
+            "::",
+            stringify!(en)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<pwm_hw_t>())).intr as *const _ as usize },
+        164usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pwm_hw_t),
+            "::",
+            stringify!(intr)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<pwm_hw_t>())).inte as *const _ as usize },
+        168usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pwm_hw_t),
+            "::",
+            stringify!(inte)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<pwm_hw_t>())).intf as *const _ as usize },
+        172usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pwm_hw_t),
+            "::",
+            stringify!(intf)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<pwm_hw_t>())).ints as *const _ as usize },
+        176usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pwm_hw_t),
+            "::",
+            stringify!(ints)
+        )
+    );
+}
+#[doc = "< Free-running counting at rate dictated by fractional divider"]
+pub const PWM_DIV_FREE_RUNNING: pwm_clkdiv_mode = 0;
+#[doc = "< Fractional divider is gated by the PWM B pin"]
+pub const PWM_DIV_B_HIGH: pwm_clkdiv_mode = 1;
+#[doc = "< Fractional divider advances with each rising edge of the PWM B pin"]
+pub const PWM_DIV_B_RISING: pwm_clkdiv_mode = 2;
+#[doc = "< Fractional divider advances with each falling edge of the PWM B pin"]
+pub const PWM_DIV_B_FALLING: pwm_clkdiv_mode = 3;
+#[doc = " \\brief PWM Divider mode settings"]
+#[doc = "   \\ingroup hardware_pwm"]
+#[doc = ""]
+pub type pwm_clkdiv_mode = crate::ctypes::c_uint;
+pub const PWM_CHAN_A: pwm_chan = 0;
+pub const PWM_CHAN_B: pwm_chan = 1;
+pub type pwm_chan = crate::ctypes::c_uint;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct pwm_config {
+    pub csr: u32,
+    pub div: u32,
+    pub top: u32,
+}
+#[test]
+fn bindgen_test_layout_pwm_config() {
+    assert_eq!(
+        ::core::mem::size_of::<pwm_config>(),
+        12usize,
+        concat!("Size of: ", stringify!(pwm_config))
+    );
+    assert_eq!(
+        ::core::mem::align_of::<pwm_config>(),
+        4usize,
+        concat!("Alignment of ", stringify!(pwm_config))
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<pwm_config>())).csr as *const _ as usize },
+        0usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pwm_config),
+            "::",
+            stringify!(csr)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<pwm_config>())).div as *const _ as usize },
+        4usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pwm_config),
+            "::",
+            stringify!(div)
+        )
+    );
+    assert_eq!(
+        unsafe { &(*(::core::ptr::null::<pwm_config>())).top as *const _ as usize },
+        8usize,
+        concat!(
+            "Offset of field: ",
+            stringify!(pwm_config),
+            "::",
+            stringify!(top)
+        )
+    );
 }
 pub type __builtin_va_list = [__va_list_tag; 1usize];
 #[repr(C)]
