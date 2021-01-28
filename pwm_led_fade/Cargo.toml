@@ -1,0 +1,11 @@
+[package]
+name = "pwm_led_fade"
+version = "0.1.0"
+authors = ["Andelf <andelf@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+rpi-pico-sdk-sys = { path = "../pico-sdk-sys" }
