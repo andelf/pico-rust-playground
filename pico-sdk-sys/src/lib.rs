@@ -10,11 +10,13 @@ pub mod ctypes;
 mod gen;
 mod gpio;
 mod pwm;
+mod spi;
 
-use ctypes::*;
-pub use gen::*;
-pub use gpio::*;
-pub use pwm::*;
+use self::ctypes::*;
+pub use self::gen::*;
+pub use self::gpio::*;
+pub use self::pwm::*;
+pub use self::spi::*;
 
 // hardware/base
 #[inline]
