@@ -11,4 +11,4 @@ pico_sdk_init()
 
 
 add_subdirectory(blink)
-# add_subdirectory(pwm_led_fade)
+add_subdirectory(pwm_led_fade)

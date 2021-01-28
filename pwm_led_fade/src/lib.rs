@@ -1,12 +1,11 @@
 #![no_std]
 
-use rpi_pico_sdk_sys::*;
 use rpi_pico_sdk_sys::ctypes::c_int;
-
+use rpi_pico_sdk_sys::*;
 
 unsafe extern "C" fn on_pwm_wrap() {
     static mut FADE: i32 = 0;
-    static mut GOING_UP: bool  = true;
+    static mut GOING_UP: bool = true;
     // Clear the interrupt flag that brought us here
     pwm_clear_irq(pwm_gpio_to_slice_num(PICO_DEFAULT_LED_PIN));
 
@@ -28,7 +27,6 @@ unsafe extern "C" fn on_pwm_wrap() {
     pwm_set_gpio_level(PICO_DEFAULT_LED_PIN, (FADE * FADE) as u16);
 }
 
-
 #[no_mangle]
 pub unsafe extern "C" fn main() -> c_int {
     // Tell the LED pin that the PWM is in charge of its value.
@@ -43,7 +41,6 @@ pub unsafe extern "C" fn main() -> c_int {
     irq_set_exclusive_handler(PWM_IRQ_WRAP, Some(on_pwm_wrap));
     irq_set_enabled(PWM_IRQ_WRAP, true);
 
-
     // Get some sensible defaults for the slice configuration. By default, the
     // counter is allowed to wrap over its maximum range (0 to 2**16-1)
     let mut config = pwm_get_default_config();
@@ -53,14 +50,12 @@ pub unsafe extern "C" fn main() -> c_int {
     // Load the configuration into our PWM slice, and set it running.
     pwm_init(slice_num, &config, true);
 
-
     loop {
         sleep_ms(500);
     }
 }
 
-
 #[panic_handler]
-fn panic(_info: &core::panic::PanicInfo) -> ! {
+unsafe fn panic(_info: &core::panic::PanicInfo) -> ! {
     loop {}
 }
