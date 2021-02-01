@@ -1,0 +1,18 @@
+{
+  "configurations": [
+    {
+      "cwd": "${workspaceRoot}",
+      "executable": "./build/${command:cmake.launchTargetPath}",
+      "name": "Debug Pico",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "gdbPath": "arm-none-eabi-gdb",
+      "device": "RP2040",
+      "configFiles": ["./ft2232h-swd.cfg", "target/rp2040.cfg"],
+      "svdFile": "../pico-sdk/src/rp2040/hardware_regs/rp2040.svd",
+      "runToMain": true,
+      "postRestartCommands": ["break main", "continue"]
+    }
+  ]
+}
