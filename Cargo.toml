@@ -1,5 +1,6 @@
 [workspace]
 members = [
     "blink",
-    "pwm_led_fade"
+    "pwm_led_fade",
+    "hello_epd"
 ]
