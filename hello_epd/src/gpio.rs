@@ -1,3 +1,5 @@
+//! Fake embedded-hal gpio via c-sdk.
+
 use core::marker::PhantomData;
 use embedded_hal::digital::v2::{toggleable, InputPin, OutputPin, StatefulOutputPin};
 use rpi_pico_sdk_sys::*;

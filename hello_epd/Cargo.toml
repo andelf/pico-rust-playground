@@ -9,6 +9,6 @@ crate-type = ["staticlib"]
 
 [dependencies]
 rpi-pico-sdk-sys = { path = "../pico-sdk-sys" }
-epd = { path = "../../../../Repos/epd" }
+epd = { path = "../../../Repos/epd" }
 embedded-hal = { version = "0.2", features = ["unproven"]}
 embedded-graphics = "0.6"

@@ -1,10 +1,21 @@
 use rpi_pico_sdk_sys::*;
+//! Fake embedded-hal SPI via c-sdk.
 
-const spi0: *mut spi_inst_t = 0;
-const spi1: *mut spi_inst_t = 0;
+use embedded_hal::blocking::spi;
+use core::convert::Infallible;
+
 pub struct SPI {
     hw: *mut spi_inst_t,
 }
+
+impl Drop for SPI {
+    fn drop(&mut self) {
+        unsafe {
+            spi_deinit(self.hw);
+        }
+    }
+}
+
 
 impl SPI {
     pub fn spi0(baudrate: uint) -> Self {
@@ -23,5 +34,23 @@ impl SPI {
         unsafe {
             spi_init(self.hw, baudrate);
         }
+    }
+
+    pub fn set_baudrate(&mut self, baudrate: uint) {
+        unsafe {
+            spi_set_baudrate(self.hw, baudrate);
+        }
+    }
+}
+
+
+impl spi::Write<u8> for SPI {
+    type Error = Infallible;
+
+    fn write(&mut self, words: &[u8]) -> Result<(), Self::Error> {
+        unsafe {
+            spi_write_blocking(self.hw, words.as_ptr(), words.len() as _);
+        }
+        Ok(())
     }
 }
