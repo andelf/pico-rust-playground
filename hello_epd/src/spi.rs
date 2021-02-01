@@ -1,8 +1,8 @@
-use rpi_pico_sdk_sys::*;
 //! Fake embedded-hal SPI via c-sdk.
 
-use embedded_hal::blocking::spi;
+use rpi_pico_sdk_sys::*;
 use core::convert::Infallible;
+use embedded_hal::blocking::spi;
 
 pub struct SPI {
     hw: *mut spi_inst_t,
@@ -15,7 +15,6 @@ impl Drop for SPI {
         }
     }
 }
-
 
 impl SPI {
     pub fn spi0(baudrate: uint) -> Self {
@@ -42,7 +41,6 @@ impl SPI {
         }
     }
 }
-
 
 impl spi::Write<u8> for SPI {
     type Error = Infallible;

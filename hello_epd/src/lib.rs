@@ -88,7 +88,7 @@ pub unsafe extern "C" fn main() -> i32 {
     )
     .draw(&mut epd);
 
-    Text::new("Hello from Rust!", Point::new(0, 5))
+    Text::new("Hello from Rust!", Point::new(2, 5))
         .into_styled(style)
         .draw(&mut epd)
         .unwrap();
