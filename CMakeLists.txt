@@ -9,6 +9,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 pico_sdk_init()
 
-
 add_subdirectory(blink)
 add_subdirectory(pwm_led_fade)
+add_subdirectory(hello_epd)
