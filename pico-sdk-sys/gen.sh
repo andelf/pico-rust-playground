@@ -7,6 +7,7 @@ bindgen wrapper.h \
     --ctypes-prefix "crate::ctypes" \
     --disable-untagged-union \
     --no-prepend-enum-name \
+    --no-layout-tests \
     -- \
     -I $PICO_SDK_PATH/src/rp2_common/pico_stdio/include \
     -I $PICO_SDK_PATH/src/common/pico_stdlib/include \
