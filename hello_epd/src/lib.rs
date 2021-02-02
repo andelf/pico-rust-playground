@@ -11,14 +11,12 @@ use embedded_graphics::prelude::*;
 use embedded_graphics::{egcircle, egline, egrectangle, egtext, primitive_style, text_style};
 
 use epd::display::DisplayRotation;
+use rpi_pico_sdk::gpio::Gpio;
+use rpi_pico_sdk::spi::SPI;
+
+use self::bytes::BytesWriter;
 
 pub mod bytes;
-pub mod gpio;
-pub mod spi;
-
-use bytes::BytesWriter;
-use gpio::Gpio;
-use spi::SPI;
 
 /*
 GP18 => SCL

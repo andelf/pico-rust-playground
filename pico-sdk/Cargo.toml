@@ -1,16 +1,21 @@
 [package]
-name = "rpi-pico-sdk-sys"
+name = "rpi-pico-sdk"
 version = "0.0.3"
 authors = ["Andelf <andelf@gmail.com>"]
 edition = "2018"
-description = "The pico-sdk ffi binding for Raspberry Pi Pico"
+description = "The pico-sdk binding for Raspberry Pi Pico"
 homepage = "https://github.com/andelf/pico-rust-playground"
 repository = "https://github.com/andelf/pico-rust-playground"
 documentation = "https://docs.rs/rpi-pico-sdk-sys"
 keywords = ["rp2040"]
-categories = ["external-ffi-bindings", "embedded", "hardware-support"]
+categories = ["embedded", "hardware-support"]
 license = "MIT"
 include = ["src/**/*", "Cargo.toml", "README.md", "LICENSE"]
+
+
+[dependencies]
+rpi-pico-sdk-sys = { version = "0.0.3", path = "../pico-sdk-sys" }
+embedded-hal = { version = "0.2", features = ["unproven"]}
 
 [badges]
 maintenance = { status = "experimental" }
