@@ -1,7 +1,7 @@
 //! Fake embedded-hal gpio via c-sdk.
 
 use core::marker::PhantomData;
-use embedded_hal::digital::v2::{toggleable, InputPin, OutputPin, StatefulOutputPin};
+use embedded_hal::digital::v2::{ToggleableOutputPin, InputPin, OutputPin, StatefulOutputPin};
 use rpi_pico_sdk_sys::*;
 
 pub enum GpioFunction {
@@ -141,7 +141,15 @@ impl<MODE> StatefulOutputPin for Gpio<Output<MODE>> {
     }
 }
 
-impl<MODE> toggleable::Default for Gpio<Output<MODE>> {}
+impl<MODE>  ToggleableOutputPin for Gpio<Output<MODE>> {
+    type Error = core::convert::Infallible;
+
+    /// Toggle pin output.
+    fn toggle(&mut self) -> Result<(), Self::Error> {
+        unsafe { gpio_xor_mask(1 << self.pin); }
+        Ok(())
+    }
+}
 
 impl<MODE> InputPin for Gpio<Output<MODE>> {
     type Error = core::convert::Infallible;
